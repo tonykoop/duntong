@@ -1,0 +1,1198 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R] /Count 12 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2485 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (Duntong Original Cylindrical Tongue Drum Print Packet) Tj
+-50 0 Td
+50 736 Td () Tj
+-50 0 Td
+50 722 Td (Generated: 2026-05-05) Tj
+-50 0 Td
+50 708 Td (Packet folder: /mnt/c/Users/Tony/Documents/GitHub/duntong) Tj
+-50 0 Td
+50 694 Td () Tj
+-50 0 Td
+50 680 Td (File Map) Tj
+-50 0 Td
+50 666 Td () Tj
+-50 0 Td
+50 652 Td (File   Purpose) Tj
+-50 0 Td
+50 638 Td (---   ---) Tj
+-50 0 Td
+50 624 Td (design.md   Project intent, catalog metadata, assumptions, and validation plan.) Tj
+-50 0 Td
+50 610 Td (bom.csv   Starter bill of materials with part categories, quantities, drawing refs, and) Tj
+-50 0 Td
+50 596 Td (notes.) Tj
+-50 0 Td
+50 582 Td (sourcing.csv   Supplier/search tracker with specs, price/date fields, lead time,) Tj
+-50 0 Td
+50 568 Td (substitutes, and risks.) Tj
+-50 0 Td
+50 554 Td (cut-list.csv   Rough/final stock sizes, material, grain/orientation, operations, yield, and) Tj
+-50 0 Td
+50 540 Td (offcuts.) Tj
+-50 0 Td
+50 526 Td (drawing-brief.md   Manufacturing drawing and technical product sketch brief.) Tj
+-50 0 Td
+50 512 Td (assembly-manual.md   Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and) Tj
+-50 0 Td
+50 498 Td (maintenance notes.) Tj
+-50 0 Td
+50 484 Td (validation.csv   Target/measured values, tolerance, environment, result, and tuning/build) Tj
+-50 0 Td
+50 470 Td (action log.) Tj
+-50 0 Td
+50 456 Td (supplier-rfq.md   Supplier email/request-for-quote starter.) Tj
+-50 0 Td
+50 442 Td (visual-bom-brief.md   Art direction for an image-forward visual BOM.) Tj
+-50 0 Td
+50 428 Td (README.md   Project artifact.) Tj
+-50 0 Td
+50 414 Td (family-spec.csv   Project artifact.) Tj
+-50 0 Td
+50 400 Td (photo-shotlist.md   Project artifact.) Tj
+-50 0 Td
+50 386 Td (risks.md   Project artifact.) Tj
+-50 0 Td
+50 372 Td () Tj
+-50 0 Td
+50 358 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 344 Td () Tj
+-50 0 Td
+50 330 Td (design.md) Tj
+-50 0 Td
+50 316 Td () Tj
+-50 0 Td
+50 302 Td (Project intent, catalog metadata, assumptions, and validation plan.) Tj
+-50 0 Td
+50 288 Td () Tj
+-50 0 Td
+50 274 Td (Duntong Build Design) Tj
+-50 0 Td
+50 260 Td () Tj
+-50 0 Td
+50 246 Td (Project Intent) Tj
+-50 0 Td
+50 232 Td () Tj
+-50 0 Td
+50 218 Td (The duntong is Tony Koop's original cylindrical tongue drum concept. It combines a dundun-) Tj
+-50 0 Td
+50 204 Td (like round body and optional drumhead/ported ends with wooden tongue drum voices cut) Tj
+-50 0 Td
+50 190 Td (directly into the shell wall.) Tj
+-50 0 Td
+50 176 Td () Tj
+-50 0 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2502 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (The first build should answer three practical questions:) Tj
+-50 0 Td
+50 736 Td () Tj
+-50 0 Td
+50 722 Td (1. Can a cylindrical stave shell hold predictable cantilever tongue pitches?) Tj
+-50 0 Td
+50 708 Td (2. Which end configuration gives the best musical balance: sealed, ported, or drumheaded?) Tj
+-50 0 Td
+50 694 Td (3. Can the V1 be manufactured safely with Tony's available home-shop and Maker Nexus) Tj
+-50 0 Td
+50 680 Td (workflows before SolidWorks CAM exists?) Tj
+-50 0 Td
+50 666 Td () Tj
+-50 0 Td
+50 652 Td (Mode A repo shape is used here: this is a single-instrument repository, so files live at the) Tj
+-50 0 Td
+50 638 Td (repo root and in conventional folders.) Tj
+-50 0 Td
+50 624 Td () Tj
+-50 0 Td
+50 610 Td (Design Intake) Tj
+-50 0 Td
+50 596 Td () Tj
+-50 0 Td
+50 582 Td (Field   Value) Tj
+-50 0 Td
+50 568 Td (--- ---) Tj
+-50 0 Td
+50 554 Td (Instrument ID   DNT-001) Tj
+-50 0 Td
+50 540 Td (Instrument type   Duntong) Tj
+-50 0 Td
+50 526 Td (Family   Cylindrical tongue drum / drum-skin hybrid) Tj
+-50 0 Td
+50 512 Td (Inventor   Tony Koop, 2026) Tj
+-50 0 Td
+50 498 Td (Workbook   duntong-design-table.xlsx, sheet Duntong) Tj
+-50 0 Td
+50 484 Td (Reference workbook   Musical Instruments V2.xlsx, sheet Duntong) Tj
+-50 0 Td
+50 470 Td (Done-bar reference   tonykoop/tongue-drum for tongue physics; tonykoop/djembe,) Tj
+-50 0 Td
+50 456 Td (tonykoop/conga, and tonykoop/ashiko-drum-workshop for segmented/stave construction) Tj
+-50 0 Td
+50 442 Td (V1 recommendation   Medium stave cylinder, single-ring tongue layout, sealed or goatskin end) Tj
+-50 0 Td
+50 428 Td (option) Tj
+-50 0 Td
+50 414 Td (Current scale baseline   C minor pentatonic from the workbook) Tj
+-50 0 Td
+50 400 Td (Alternate scale request   D minor pentatonic remains TBD until the workbook row is updated) Tj
+-50 0 Td
+50 386 Td (Primary material   Padauk in the workbook; cherry or maple alternate TBD) Tj
+-50 0 Td
+50 372 Td () Tj
+-50 0 Td
+50 358 Td (Guided intake outputs are in data/design-intake.json and data/design-input-row.csv.) Tj
+-50 0 Td
+50 344 Td () Tj
+-50 0 Td
+50 330 Td (Governing Model) Tj
+-50 0 Td
+50 316 Td () Tj
+-50 0 Td
+50 302 Td (Tongues) Tj
+-50 0 Td
+50 288 Td () Tj
+-50 0 Td
+50 274 Td (The primary pitch model is a fixed-free cantilever beam:) Tj
+-50 0 Td
+50 260 Td () Tj
+-50 0 Td
+50 246 Td (text) Tj
+-50 0 Td
+50 232 Td (f = K  t / L^2) Tj
+-50 0 Td
+50 218 Td (L = sqrt\(K  t / f\)) Tj
+-50 0 Td
+50 204 Td () Tj
+-50 0 Td
+50 190 Td () Tj
+-50 0 Td
+50 176 Td (Where:) Tj
+-50 0 Td
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 2742 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td () Tj
+-50 0 Td
+50 736 Td (- f is tongue fundamental frequency in Hz.) Tj
+-50 0 Td
+50 722 Td (- K is the material-specific imperial cantilever constant from the tongue-drum material) Tj
+-50 0 Td
+50 708 Td (library.) Tj
+-50 0 Td
+50 694 Td (- t is the shell wall thickness in inches. This is also the tongue thickness.) Tj
+-50 0 Td
+50 680 Td (- L is tongue length in inches.) Tj
+-50 0 Td
+50 666 Td () Tj
+-50 0 Td
+50 652 Td (For the workbook baseline, K = 24438 for Padauk. The model assumes the tongue behaves like a) Tj
+-50 0 Td
+50 638 Td (flat cantilever. The workbook flags curvature as acceptable when tongue width divided by) Tj
+-50 0 Td
+50 624 Td (cylinder OD is less than or equal to 0.20. The handheld ratio is 1.0 / 6.0 = 0.167. The) Tj
+-50 0 Td
+50 610 Td (medium ratio is 1.5 / 12.0 = 0.125. Both are inside the first-pass range, but the curved) Tj
+-50 0 Td
+50 596 Td (shell may still raise pitch by about 2-5 percent and must be measured.) Tj
+-50 0 Td
+50 582 Td () Tj
+-50 0 Td
+50 568 Td (Body And End Coupling) Tj
+-50 0 Td
+50 554 Td () Tj
+-50 0 Td
+50 540 Td (The cylinder body is secondary coupling, not the main pitch source. Four end conditions are) Tj
+-50 0 Td
+50 526 Td (preserved as design variants:) Tj
+-50 0 Td
+50 512 Td () Tj
+-50 0 Td
+50 498 Td (Option   End condition   First-pass model   Musical character) Tj
+-50 0 Td
+50 484 Td (--- --- --- ---) Tj
+-50 0 Td
+50 470 Td (A   Both ends solid   Helmholtz-like cavity using tongue slits as neck openings   Warm,) Tj
+-50 0 Td
+50 456 Td (focused sustain) Tj
+-50 0 Td
+50 442 Td (B   One port, one solid   Stopped pipe approximation   Deeper bass projection) Tj
+-50 0 Td
+50 428 Td (C   Two ports   Open pipe approximation   Brighter projection) Tj
+-50 0 Td
+50 414 Td (D   One or both drumheads   Membrane plus cantilever hybrid   Closest to dundun inspiration) Tj
+-50 0 Td
+50 400 Td () Tj
+-50 0 Td
+50 386 Td (Important guard rule: the NAF K2 bore correction does not apply to this instrument. Only) Tj
+-50 0 Td
+50 372 Td (cantilever beam K constants are used for tongue pitch. Helmholtz/stopped/open-pipe equations) Tj
+-50 0 Td
+50 358 Td (are exploration and validation targets for the body, not corrections to tongue length.) Tj
+-50 0 Td
+50 344 Td () Tj
+-50 0 Td
+50 330 Td (Worked Medium Example) Tj
+-50 0 Td
+50 316 Td () Tj
+-50 0 Td
+50 302 Td (For the medium prototype:) Tj
+-50 0 Td
+50 288 Td () Tj
+-50 0 Td
+50 274 Td (text) Tj
+-50 0 Td
+50 260 Td (OD = 12.000 in) Tj
+-50 0 Td
+50 246 Td (length = 16.000 in) Tj
+-50 0 Td
+50 232 Td (wall/tongue thickness = 0.500 in) Tj
+-50 0 Td
+50 218 Td (tongue width = 1.500 in) Tj
+-50 0 Td
+50 204 Td (slit width = 0.125 in) Tj
+-50 0 Td
+50 190 Td (K = 24438) Tj
+-50 0 Td
+50 176 Td (root MIDI = 60 \(C4\)) Tj
+-50 0 Td
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 2337 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td () Tj
+-50 0 Td
+50 736 Td () Tj
+-50 0 Td
+50 722 Td (The C4 tongue prediction is:) Tj
+-50 0 Td
+50 708 Td () Tj
+-50 0 Td
+50 694 Td (text) Tj
+-50 0 Td
+50 680 Td (L = sqrt\(24438  0.5 / 261.63\) = 6.834 in) Tj
+-50 0 Td
+50 666 Td () Tj
+-50 0 Td
+50 652 Td () Tj
+-50 0 Td
+50 638 Td (The medium shell circumference is pi  12 = 37.699 in, allowing about 23 tongue-width-plus-) Tj
+-50 0 Td
+50 624 Td (slit slots. The requested 8 tongues fit.) Tj
+-50 0 Td
+50 610 Td () Tj
+-50 0 Td
+50 596 Td (Using the workbook formula for sealed-body slit-area coupling:) Tj
+-50 0 Td
+50 582 Td () Tj
+-50 0 Td
+50 568 Td (text) Tj
+-50 0 Td
+50 554 Td (slit area = 8  \(0.125  1.5 + 2  0.125  3.0\) = 7.5 in^2) Tj
+-50 0 Td
+50 540 Td (internal volume = pi  \(11 / 2\)^2  16 = 1520.5 in^3) Tj
+-50 0 Td
+50 526 Td (effective neck length = 0.5 in) Tj
+-50 0 Td
+50 512 Td (fH = 13552 / \(2pi\)  sqrt\(7.5 / \(1520.5  0.5\)\) = about 214 Hz) Tj
+-50 0 Td
+50 498 Td () Tj
+-50 0 Td
+50 484 Td () Tj
+-50 0 Td
+50 470 Td (The workbook prose note also mentions 135 Hz for medium sealed coupling. That appears to be) Tj
+-50 0 Td
+50 456 Td (a stale or alternate-geometry note; keep it visible as a validation question rather than) Tj
+-50 0 Td
+50 442 Td (treating either value as proven.) Tj
+-50 0 Td
+50 428 Td () Tj
+-50 0 Td
+50 414 Td (Family / Variant Targets) Tj
+-50 0 Td
+50 400 Td () Tj
+-50 0 Td
+50 386 Td (Variant   OD \(in\)   Length \(in\)   Wall \(in\)   Root   Tongues   Construction target) Tj
+-50 0 Td
+50 372 Td (--- ---: ---: ---: --- ---: ---) Tj
+-50 0 Td
+50 358 Td (DNT-HANDHELD   6.000   9.000   0.375   C5   8   Split-blank or stave prototype) Tj
+-50 0 Td
+50 344 Td (DNT-MEDIUM   12.000   16.000   0.500   C4   8   V1 stave cylinder) Tj
+-50 0 Td
+50 330 Td () Tj
+-50 0 Td
+50 316 Td (Medium predicted tongue table:) Tj
+-50 0 Td
+50 302 Td () Tj
+-50 0 Td
+50 288 Td (Note   MIDI   Target Hz   Predicted L \(in\)) Tj
+-50 0 Td
+50 274 Td (---: --- ---: ---: ---:) Tj
+-50 0 Td
+50 260 Td (1   C4   60   261.63   6.834) Tj
+-50 0 Td
+50 246 Td (2   Eb4   63   311.13   6.267) Tj
+-50 0 Td
+50 232 Td (3   F4   65   349.23   5.915) Tj
+-50 0 Td
+50 218 Td (4   G4   67   392.00   5.583) Tj
+-50 0 Td
+50 204 Td (5   Ab4   68   415.30   5.424) Tj
+-50 0 Td
+50 190 Td (6   Bb4   70   466.16   5.120) Tj
+-50 0 Td
+50 176 Td (7   C5   72   523.25   4.832) Tj
+-50 0 Td
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 2847 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (8   Eb5   75   622.25   4.431) Tj
+-50 0 Td
+50 736 Td () Tj
+-50 0 Td
+50 722 Td (Hardware Alignment) Tj
+-50 0 Td
+50 708 Td () Tj
+-50 0 Td
+50 694 Td (The V1 build is a stave-cylinder shell with CNC-cut tongue slits. The CNC plan is pre-CAM) Tj
+-50 0 Td
+50 680 Td (only; feeds, speeds, hold-down, and simulation must be set at the actual machine.) Tj
+-50 0 Td
+50 666 Td () Tj
+-50 0 Td
+50 652 Td (Operation   Tooling   Fixture / datum   Notes) Tj
+-50 0 Td
+50 638 Td (--- --- --- ---) Tj
+-50 0 Td
+50 624 Td (Rip staves   Table saw, miter sled   Long edge datum, 15 deg miter for 12 staves   Cut extra) Tj
+-50 0 Td
+50 610 Td (staves for tuning and destructive tests) Tj
+-50 0 Td
+50 596 Td (Thickness staves   Planer / drum sander   Outside face A   Tongue pitch depends directly on) Tj
+-50 0 Td
+50 582 Td (final wall thickness) Tj
+-50 0 Td
+50 568 Td (Glue cylinder   Band clamps or hose clamps   Shell axis datum A   Glue in two half-shells,) Tj
+-50 0 Td
+50 554 Td (then join halves) Tj
+-50 0 Td
+50 540 Td (True shell   Lathe   Shell axis between centers/chuck   Final wall is tuning-critical) Tj
+-50 0 Td
+50 526 Td (End cap or drumhead prep   Lathe, band saw, drill press   End plane datum B/C   Preserve) Tj
+-50 0 Td
+50 512 Td (sealed, ported, and drumhead variants) Tj
+-50 0 Td
+50 498 Td (Tongue layout   1:1 wrap template or SolidWorks unwrap   Shell axis A, equator plane D,) Tj
+-50 0 Td
+50 484 Td (index zero E   Single ring around equator for V1) Tj
+-50 0 Td
+50 470 Td (Tongue cuts   CNC router, 1/8 in upcut spiral   V-block cradle, rotary indexing, shell axis) Tj
+-50 0 Td
+50 456 Td (A   Start tongues about 5 percent long/flat for tuning trim) Tj
+-50 0 Td
+50 442 Td (Tuning   Files, Dremel, tuner   Tongue root and tip marks   Shorten tip to raise pitch; thin) Tj
+-50 0 Td
+50 428 Td (near base to lower pitch) Tj
+-50 0 Td
+50 414 Td () Tj
+-50 0 Td
+50 400 Td (SolidWorks MasterLayout Plan) Tj
+-50 0 Td
+50 386 Td () Tj
+-50 0 Td
+50 372 Td (Do not fake SolidWorks files. This repo includes a real handoff:) Tj
+-50 0 Td
+50 358 Td () Tj
+-50 0 Td
+50 344 Td (- cad/SolidWorks-MasterLayout-Plan.md) Tj
+-50 0 Td
+50 330 Td (- cad/design-table-inputs.csv) Tj
+-50 0 Td
+50 316 Td (- cad/sw-global-variables.csv) Tj
+-50 0 Td
+50 302 Td () Tj
+-50 0 Td
+50 288 Td (The MasterLayout should own shell OD/ID/length, wall thickness, stave count, miter angle,) Tj
+-50 0 Td
+50 274 Td (tongue count, tongue lengths, slit width, tongue band position, end cap variant, port) Tj
+-50 0 Td
+50 260 Td (diameter, trim allowance, and registration datums. It should also include an unwrap or wrap-) Tj
+-50 0 Td
+50 246 Td (template drawing for V1 CNC layout.) Tj
+-50 0 Td
+50 232 Td () Tj
+-50 0 Td
+50 218 Td (Open Assumptions) Tj
+-50 0 Td
+50 204 Td () Tj
+-50 0 Td
+50 190 Td (Assumption   Status   Test) Tj
+-50 0 Td
+50 176 Td (--- --- ---) Tj
+-50 0 Td
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 3403 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (Padauk K = 24438 applies to curved shell tongues   First-order only   Measure struck pitch) Tj
+-50 0 Td
+50 736 Td (before and after slit tuning) Tj
+-50 0 Td
+50 722 Td (Curvature ratio below 0.20 keeps flat-beam formula usable   First-order only   Compare) Tj
+-50 0 Td
+50 708 Td (predicted vs measured cents error on all eight tongues) Tj
+-50 0 Td
+50 694 Td (Medium sealed-body coupling is near 214 Hz by current formula   Formula result   Verify) Tj
+-50 0 Td
+50 680 Td (against Excel cached value and measured cavity tap/impulse response) Tj
+-50 0 Td
+50 666 Td (Workbook prose note of 135 Hz body resonance is stale or alternate geometry   TBD) Tj
+-50 0 Td
+50 652 Td (Recalculate in Excel and Wolfram after dimensions are frozen) Tj
+-50 0 Td
+50 638 Td (Single-ring layout is playable by one or two players   TBD   Mock hand reach on a 12 in) Tj
+-50 0 Td
+50 624 Td (diameter cylinder before CNC) Tj
+-50 0 Td
+50 610 Td (Goatskin end option is the "true duntong" expression   Design intent   Build sealed, ported,) Tj
+-50 0 Td
+50 596 Td (and goatskin variants for comparison) Tj
+-50 0 Td
+50 582 Td () Tj
+-50 0 Td
+50 568 Td (Validation Plan) Tj
+-50 0 Td
+50 554 Td () Tj
+-50 0 Td
+50 540 Td (1. Build a scrap tongue coupon at the same wall thickness and grain orientation.) Tj
+-50 0 Td
+50 526 Td (2. Cut one reference C4 tongue 5 percent long and tune upward to target.) Tj
+-50 0 Td
+50 512 Td (3. Record before/after frequency, humidity, temperature, and material thickness.) Tj
+-50 0 Td
+50 498 Td (4. Build the medium shell and cut the eight tongues from longest to shortest.) Tj
+-50 0 Td
+50 484 Td (5. Measure every tongue after rough cut, after tuning, and after finish.) Tj
+-50 0 Td
+50 470 Td (6. Test sealed, one-port, and goatskin end configurations with the same tongue set where) Tj
+-50 0 Td
+50 456 Td (practical.) Tj
+-50 0 Td
+50 442 Td (7. Update validation.csv and feed measured data back through the empirical-learning loop) Tj
+-50 0 Td
+50 428 Td (once a prototype exists.) Tj
+-50 0 Td
+50 414 Td () Tj
+-50 0 Td
+50 400 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 386 Td () Tj
+-50 0 Td
+50 372 Td (bom.csv) Tj
+-50 0 Td
+50 358 Td () Tj
+-50 0 Td
+50 344 Td (Starter bill of materials with part categories, quantities, drawing refs, and notes.) Tj
+-50 0 Td
+50 330 Td () Tj
+-50 0 Td
+50 316 Td (itemid   category   partname   qty   unit   materialspec   dimensions   makebuy) Tj
+-50 0 Td
+50 302 Td (sourceorsupplier   searchterms   datechecked   unitcostusd   totalcostusd   substituterule) Tj
+-50 0 Td
+50 288 Td (drawingref   notes) Tj
+-50 0 Td
+50 274 Td (---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---) Tj
+-50 0 Td
+50 260 Td (---) Tj
+-50 0 Td
+50 246 Td (B-001   Body   Padauk staves   12   each   Padauk or alternate hardwood   16 in x 3.1 in x) Tj
+-50 0 Td
+50 232 Td (1.0 in rough   make   lumber supplier   padauk 4/4 or 5/4 lumber blank            Cherry or) Tj
+-50 0 Td
+50 218 Td (hard maple acceptable if K is updated   drawings/body-overview.svg   V1 medium stave shell) Tj
+-50 0 Td
+50 204 Td (B-002   Body   End cap blanks   2   each   Padauk or matching hardwood   13 in x 13 in x) Tj
+-50 0 Td
+50 190 Td (0.75 in   make   lumber supplier   padauk panel blank 13 inch square            Use drumhead) Tj
+-50 0 Td
+50 176 Td (hardware instead for Config D   drawings/end-config-options.svg   Sealed configuration) Tj
+-50 0 Td
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 3883 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (baseline) Tj
+-50 0 Td
+50 736 Td (B-003   Body   Acoustic port tube   1   each   Wood or PVC   3 in OD x 1 in length) Tj
+-50 0 Td
+50 722 Td (make/buy   hardware supplier   3 inch wood tube pvc pipe offcut            Only needed for) Tj
+-50 0 Td
+50 708 Td (ported variant   drawings/end-config-options.svg   Ported option) Tj
+-50 0 Td
+50 694 Td (B-004   Head   Goatskin rawhide   1   each   Goatskin or calfskin   16 in or larger round) Tj
+-50 0 Td
+50 680 Td (buy   drum parts supplier   goatskin drum head 16 inch rawhide            Synthetic head is) Tj
+-50 0 Td
+50 666 Td (alternate   drawings/end-config-options.svg   Optional true duntong end) Tj
+-50 0 Td
+50 652 Td (B-005   Head   Rope tuning kit   1   set   Low-stretch polyester or drum rope   TBD   buy) Tj
+-50 0 Td
+50 638 Td (drum parts supplier   djembe rope tuning ring 12 inch            Only needed for goatskin) Tj
+-50 0 Td
+50 624 Td (variant   drawings/end-config-options.svg   Includes rings/pullers TBD) Tj
+-50 0 Td
+50 610 Td (B-006   CNC   1/8 in upcut spiral bit   1   each   Carbide router bit   0.125 in cutting) Tj
+-50 0 Td
+50 596 Td (diameter   buy   CNC tooling supplier   1/8 upcut spiral router bit carbide            Must) Tj
+-50 0 Td
+50 582 Td (match CNC collet   drawings/tongue-layout.svg   Tongue slit cutter) Tj
+-50 0 Td
+50 568 Td (B-007   Fixture   V-block cradle   1   each   MDF or plywood fixture stock   for 12 in OD) Tj
+-50 0 Td
+50 554 Td (cylinder   make   shop stock   MDF plywood V block CNC cradle            Must include clamps) Tj
+-50 0 Td
+50 540 Td (and index marks   cnc/setup-sheet.md   Holds shell during tongue cutting) Tj
+-50 0 Td
+50 526 Td (B-008   Hardware   Rubber feet or cradle stand   4   each   Rubber bumper or hardwood cradle) Tj
+-50 0 Td
+50 512 Td (TBD   buy/make   hardware supplier   rubber feet bumper instrument stand            Cradle) Tj
+-50 0 Td
+50 498 Td (preferred if cylinder wants to roll   drawings/body-overview.svg   Support for playing) Tj
+-50 0 Td
+50 484 Td (B-009   Consumable   Wood glue   1   bottle   Titebond III or equivalent   TBD   buy) Tj
+-50 0 Td
+50 470 Td (hardware supplier   water resistant wood glue            Glue choice affects open time) Tj
+-50 0 Td
+50 456 Td (assembly-manual.md   Stave shell glue-up) Tj
+-50 0 Td
+50 442 Td (B-010   Consumable   Finish and abrasives   1   set   Tung oil or lacquer plus 80-400 grit) Tj
+-50 0 Td
+50 428 Td (TBD   buy   hardware supplier   tung oil instrument finish lacquer            Avoid heavy) Tj
+-50 0 Td
+50 414 Td (finish on active tongues   assembly-manual.md   Final finishing) Tj
+-50 0 Td
+50 400 Td () Tj
+-50 0 Td
+50 386 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 372 Td () Tj
+-50 0 Td
+50 358 Td (sourcing.csv) Tj
+-50 0 Td
+50 344 Td () Tj
+-50 0 Td
+50 330 Td (Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.) Tj
+-50 0 Td
+50 316 Td () Tj
+-50 0 Td
+50 302 Td (sourceid   itemid   component   specification   requiredmatch   suppliercandidate) Tj
+-50 0 Td
+50 288 Td (searchterms   url   datechecked   unitpriceusd   minimumorder   leadtime   substitutionrisk) Tj
+-50 0 Td
+50 274 Td (notes) Tj
+-50 0 Td
+50 260 Td (---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---) Tj
+-50 0 Td
+50 246 Td (S-001   B-001   Padauk stave stock   Stable straight-grained hardwood, enough for 12 staves) Tj
+-50 0 Td
+50 232 Td (plus spares   species and grain direction   lumber supplier   padauk lumber 4/4 5/4 straight) Tj
+-50 0 Td
+50 218 Td (grain               Medium   If cherry/maple is used, update K constant and validation rows) Tj
+-50 0 Td
+50 204 Td (S-002   B-002   End cap blanks   13 in square hardwood panels, 0.75 in thick   dimensions) Tj
+-50 0 Td
+50 190 Td (lumber supplier   padauk panel blank 13x13 3/4               Low   Can be face-glued from) Tj
+-50 0 Td
+50 176 Td (narrower boards) Tj
+-50 0 Td
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 18 0 R >>
+endobj
+18 0 obj
+<< /Length 3763 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (S-003   B-003   Port tube   3 in diameter tube, about 1 in neck length   diameter if ported) Tj
+-50 0 Td
+50 736 Td (hardware supplier   3 inch pvc pipe wood tube               Medium   Port material may) Tj
+-50 0 Td
+50 722 Td (affect finish look but not primary tongue tuning) Tj
+-50 0 Td
+50 708 Td (S-004   B-004   Goatskin rawhide   16 in or larger round skin for 12 in shell   size and) Tj
+-50 0 Td
+50 694 Td (condition   drum parts supplier   16 inch goatskin rawhide drum head               Medium) Tj
+-50 0 Td
+50 680 Td (Must be checked live before purchase) Tj
+-50 0 Td
+50 666 Td (S-005   B-005   Rope tuning hardware   Rope, rings, pullers sized for 12 in shell   fit) Tj
+-50 0 Td
+50 652 Td (drum parts supplier   djembe rope tuning ring 12 inch               High   Hardware geometry) Tj
+-50 0 Td
+50 638 Td (must be frozen before drilling or rim detailing) Tj
+-50 0 Td
+50 624 Td (S-006   B-006   1/8 in upcut bit   Carbide spiral bit, 0.125 in kerf, suitable stickout) Tj
+-50 0 Td
+50 610 Td (diameter and shank   CNC tooling supplier   1/8 inch carbide upcut spiral router bit) Tj
+-50 0 Td
+50 596 Td (Medium   Bit deflection will affect slit width and tuning) Tj
+-50 0 Td
+50 582 Td (S-007   B-007   V-block fixture stock   Flat MDF/plywood, clamps, registration/index) Tj
+-50 0 Td
+50 568 Td (hardware   fixture rigidity   shop stock   MDF CNC fixture V block clamps               Low) Tj
+-50 0 Td
+50 554 Td (Make in shop from scrap if stock is flat) Tj
+-50 0 Td
+50 540 Td (S-008   B-008   Rubber feet or cradle stand   Non-marring feet or hardwood support cradle) Tj
+-50 0 Td
+50 526 Td (stability   hardware supplier   rubber feet instrument bumper cradle               Low) Tj
+-50 0 Td
+50 512 Td (Cradle is safer for rolling cylinder) Tj
+-50 0 Td
+50 498 Td (S-009   B-009   Wood glue   Water-resistant wood glue with enough open time   bond quality) Tj
+-50 0 Td
+50 484 Td (hardware supplier   Titebond III wood glue               Low   Glue-line stability matters) Tj
+-50 0 Td
+50 470 Td (because tongues are cut across the shell) Tj
+-50 0 Td
+50 456 Td (S-010   B-010   Finish system   Low-build oil or lacquer, compatible with struck wood) Tj
+-50 0 Td
+50 442 Td (finish behavior   hardware supplier   tung oil instrument finish lacquer) Tj
+-50 0 Td
+50 428 Td (Medium   Finish must be tested on scrap tongue coupon) Tj
+-50 0 Td
+50 414 Td () Tj
+-50 0 Td
+50 400 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 386 Td () Tj
+-50 0 Td
+50 372 Td (cut-list.csv) Tj
+-50 0 Td
+50 358 Td () Tj
+-50 0 Td
+50 344 Td (Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.) Tj
+-50 0 Td
+50 330 Td () Tj
+-50 0 Td
+50 316 Td (cutid   partname   variant   qty   roughdimensionsin   finisheddimensionsin   material) Tj
+-50 0 Td
+50 302 Td (grainorientation   operation   yieldoroffcutplan   drawingref   notes) Tj
+-50 0 Td
+50 288 Td (---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---   ---) Tj
+-50 0 Td
+50 274 Td (C-001   Stave blanks   DNT-MEDIUM   12   16.50 x 3.25 x 1.10   16.00 x 3.142 x 1.00   Padauk) Tj
+-50 0 Td
+50 260 Td (grain along cylinder length   rip mitered staves   cut 2 spare staves for tuning coupons) Tj
+-50 0 Td
+50 246 Td (drawings/body-overview.svg   15 deg miter for 12 staves) Tj
+-50 0 Td
+50 232 Td (C-002   End cap blanks   DNT-MEDIUM   2   13.25 x 13.25 x 0.80   disc to fit 11 in ID rabbet) Tj
+-50 0 Td
+50 218 Td (Padauk or matching hardwood   stable face grain   cut/turn end caps   offcuts become port) Tj
+-50 0 Td
+50 204 Td (and tuning test coupons   drawings/end-config-options.svg   Skip or modify for drumhead) Tj
+-50 0 Td
+50 190 Td (option) Tj
+-50 0 Td
+50 176 Td (C-003   V-block cradle   DNT-MEDIUM   1   20 x 16 x 0.75 panels   12 in OD support cradle) Tj
+-50 0 Td
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 20 0 R >>
+endobj
+20 0 obj
+<< /Length 2860 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (MDF or plywood   n/a   CNC or table saw fixture   save fixture for future variants) Tj
+-50 0 Td
+50 736 Td (cnc/setup-sheet.md   Include index marks every 45 deg) Tj
+-50 0 Td
+50 722 Td (C-004   Tongue wrap template   DNT-MEDIUM   1   sheet size TBD   1:1 wrap, 37.699 in) Tj
+-50 0 Td
+50 708 Td (circumference x 16 in length   paper or laser-safe sheet   n/a   print/laser template   n/a) Tj
+-50 0 Td
+50 694 Td (drawings/tongue-layout.svg   SolidWorks unwrap should replace this after CAD) Tj
+-50 0 Td
+50 680 Td (C-005   Port tube   DNT-MEDIUM   1   3.25 OD x 1.25   3.00 OD x 1.00   wood or PVC   n/a) Tj
+-50 0 Td
+50 666 Td (trim and fit   only for ported variant   drawings/end-config-options.svg   Actual neck) Tj
+-50 0 Td
+50 652 Td (length must be measured) Tj
+-50 0 Td
+50 638 Td (C-006   Scrap tongue coupons   DNT-MEDIUM   3   8.0 x 2.0 x 0.5   varies by test   same) Tj
+-50 0 Td
+50 624 Td (stock as shell   grain along tongue length   CNC test slits   destructive tests allowed) Tj
+-50 0 Td
+50 610 Td (validation.csv   Use before cutting shell) Tj
+-50 0 Td
+50 596 Td (C-007   Handheld body blank   DNT-HANDHELD   1   10 x 7 x 7   6 OD x 9 length x 0.375 wall) Tj
+-50 0 Td
+50 582 Td (Padauk/cherry/maple TBD   grain along tongue length   split-blank or stave build   TBD for) Tj
+-50 0 Td
+50 568 Td (later prototype   drawings/body-overview.svg   Not V1 unless Tony selects handheld first) Tj
+-50 0 Td
+50 554 Td () Tj
+-50 0 Td
+50 540 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 526 Td () Tj
+-50 0 Td
+50 512 Td (drawing-brief.md) Tj
+-50 0 Td
+50 498 Td () Tj
+-50 0 Td
+50 484 Td (Manufacturing drawing and technical product sketch brief.) Tj
+-50 0 Td
+50 470 Td () Tj
+-50 0 Td
+50 456 Td (Drawing Brief) Tj
+-50 0 Td
+50 442 Td () Tj
+-50 0 Td
+50 428 Td (Drawing Set) Tj
+-50 0 Td
+50 414 Td () Tj
+-50 0 Td
+50 400 Td (The current SVG drawing set is review-grade and should be replaced or extended by SolidWorks) Tj
+-50 0 Td
+50 386 Td (drawings before cutting expensive stock.) Tj
+-50 0 Td
+50 372 Td () Tj
+-50 0 Td
+50 358 Td (Drawing   Purpose) Tj
+-50 0 Td
+50 344 Td (--- ---) Tj
+-50 0 Td
+50 330 Td (drawings/body-overview.svg   Overall medium and handheld envelopes, major datums, V1 build) Tj
+-50 0 Td
+50 316 Td (target) Tj
+-50 0 Td
+50 302 Td (drawings/tongue-layout.svg   Single-ring tongue schedule, note order, tongue lengths, wrap-) Tj
+-50 0 Td
+50 288 Td (template concept) Tj
+-50 0 Td
+50 274 Td (drawings/end-config-options.svg   Sealed, ported, open/open, and drumhead end variants) Tj
+-50 0 Td
+50 260 Td (drawings/section-view.svg   Cross-section of stave shell, wall/tongue thickness, end cap,) Tj
+-50 0 Td
+50 246 Td (V-block fixture concept) Tj
+-50 0 Td
+50 232 Td () Tj
+-50 0 Td
+50 218 Td (Drawing Standards) Tj
+-50 0 Td
+50 204 Td () Tj
+-50 0 Td
+50 190 Td (Each drawing must preserve:) Tj
+-50 0 Td
+50 176 Td () Tj
+-50 0 Td
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 22 0 R >>
+endobj
+22 0 obj
+<< /Length 2687 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (- Title block with instrument, part, units, revision, date, and source workbook.) Tj
+-50 0 Td
+50 736 Td (- Datums: shell axis A, left end B, right end C, equator plane D, index zero E.) Tj
+-50 0 Td
+50 722 Td (- Critical dimensions: OD, ID, length, wall/tongue thickness, tongue length, tongue width,) Tj
+-50 0 Td
+50 708 Td (slit width, port diameter, and end cap rabbet.) Tj
+-50 0 Td
+50 694 Td (- Default tolerance block: +/- 0.005 in for tongue length/thickness, +/- 0.030 in for) Tj
+-50 0 Td
+50 680 Td (noncritical wood body features unless CAD says otherwise.) Tj
+-50 0 Td
+50 666 Td (- Material notes: Padauk baseline, alternate species require K update.) Tj
+-50 0 Td
+50 652 Td (- Operation notes: no G-code; V-block or rotary indexing required for cylindrical tongue) Tj
+-50 0 Td
+50 638 Td (cuts.) Tj
+-50 0 Td
+50 624 Td () Tj
+-50 0 Td
+50 610 Td (CAD Handoff) Tj
+-50 0 Td
+50 596 Td () Tj
+-50 0 Td
+50 582 Td (SolidWorks should create:) Tj
+-50 0 Td
+50 568 Td () Tj
+-50 0 Td
+50 554 Td (1. MasterLayout part with global variables from cad/sw-global-variables.csv.) Tj
+-50 0 Td
+50 540 Td (2. Configuration table for handheld and medium variants.) Tj
+-50 0 Td
+50 526 Td (3. Cylindrical unwrap sketch for the single-ring tongue layout.) Tj
+-50 0 Td
+50 512 Td (4. Optional end-cap configurations: sealed, ported, drumhead.) Tj
+-50 0 Td
+50 498 Td (5. Drawing sheets exported to PDF/SVG before CAM.) Tj
+-50 0 Td
+50 484 Td () Tj
+-50 0 Td
+50 470 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 456 Td () Tj
+-50 0 Td
+50 442 Td (assembly-manual.md) Tj
+-50 0 Td
+50 428 Td () Tj
+-50 0 Td
+50 414 Td (Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.) Tj
+-50 0 Td
+50 400 Td () Tj
+-50 0 Td
+50 386 Td (Duntong Assembly Manual) Tj
+-50 0 Td
+50 372 Td () Tj
+-50 0 Td
+50 358 Td (Scope) Tj
+-50 0 Td
+50 344 Td () Tj
+-50 0 Td
+50 330 Td (This manual covers the DNT-MEDIUM V1 stave-cylinder prototype. It is not a CAM file and does) Tj
+-50 0 Td
+50 316 Td (not replace machine setup, feeds/speeds, or a SolidWorks drawing review.) Tj
+-50 0 Td
+50 302 Td () Tj
+-50 0 Td
+50 288 Td (Tools) Tj
+-50 0 Td
+50 274 Td () Tj
+-50 0 Td
+50 260 Td (- Table saw with accurate miter sled.) Tj
+-50 0 Td
+50 246 Td (- Jointer, planer, or drum sander.) Tj
+-50 0 Td
+50 232 Td (- Band clamps or hose clamps for round glue-up.) Tj
+-50 0 Td
+50 218 Td (- Wood lathe large enough for a 12 in OD shell.) Tj
+-50 0 Td
+50 204 Td (- Drill press or lathe setup for port/end work.) Tj
+-50 0 Td
+50 190 Td (- CNC router with 1/8 in upcut spiral bit, or hand-cut slit fallback.) Tj
+-50 0 Td
+50 176 Td (- Calipers, flexible tape, tuner, microphone/recorder, hygrometer.) Tj
+-50 0 Td
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 24 0 R >>
+endobj
+24 0 obj
+<< /Length 2879 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (- Files, Dremel, sanding blocks, 80-400 grit abrasives.) Tj
+-50 0 Td
+50 736 Td () Tj
+-50 0 Td
+50 722 Td (Phase 1 - Stock Prep) Tj
+-50 0 Td
+50 708 Td () Tj
+-50 0 Td
+50 694 Td (1. Confirm final V1 variant: sealed, ported, or drumheaded.) Tj
+-50 0 Td
+50 680 Td (2. Select straight-grained Padauk or alternate hardwood. Record species, moisture content if) Tj
+-50 0 Td
+50 666 Td (available, and board orientation.) Tj
+-50 0 Td
+50 652 Td (3. Rip at least 12 stave blanks plus 2 spares.) Tj
+-50 0 Td
+50 638 Td (4. Cut 15 deg miters for a 12-stave cylinder.) Tj
+-50 0 Td
+50 624 Td (5. Plane or sand all staves to a controlled thickness. Final shell wall is the tongue) Tj
+-50 0 Td
+50 610 Td (thickness, so record actual thickness at both ends of each stave.) Tj
+-50 0 Td
+50 596 Td (6. Use one spare stave to cut scrap tongue coupons before cutting the real shell.) Tj
+-50 0 Td
+50 582 Td () Tj
+-50 0 Td
+50 568 Td (Phase 2 - Shell Glue-Up) Tj
+-50 0 Td
+50 554 Td () Tj
+-50 0 Td
+50 540 Td (1. Dry-fit the 12 staves into a cylinder.) Tj
+-50 0 Td
+50 526 Td (2. Glue as two half-shells if that improves clamping control.) Tj
+-50 0 Td
+50 512 Td (3. Join half-shells into the full cylinder with band clamps.) Tj
+-50 0 Td
+50 498 Td (4. Check roundness with calipers before the glue sets.) Tj
+-50 0 Td
+50 484 Td (5. Let the shell cure fully before lathe work.) Tj
+-50 0 Td
+50 470 Td () Tj
+-50 0 Td
+50 456 Td (Phase 3 - Turning And End Prep) Tj
+-50 0 Td
+50 442 Td () Tj
+-50 0 Td
+50 428 Td (1. Mount the shell on the lathe with support appropriate to the current blank.) Tj
+-50 0 Td
+50 414 Td (2. True the outside to 12.000 in OD.) Tj
+-50 0 Td
+50 400 Td (3. Bore or turn the inside to 11.000 in ID, leaving a 0.500 in wall.) Tj
+-50 0 Td
+50 386 Td (4. Add end rabbets if sealed caps will be used.) Tj
+-50 0 Td
+50 372 Td (5. For a ported cap, drill or turn the port after the cap is stable.) Tj
+-50 0 Td
+50 358 Td (6. For a drumheaded end, leave enough rim/bearing-edge stock and do not drill hardware until) Tj
+-50 0 Td
+50 344 Td (the hardware package is selected.) Tj
+-50 0 Td
+50 330 Td () Tj
+-50 0 Td
+50 316 Td (Phase 4 - Tongue Layout) Tj
+-50 0 Td
+50 302 Td () Tj
+-50 0 Td
+50 288 Td (1. Use drawings/tongue-layout.svg and the SolidWorks unwrap handoff as the layout basis.) Tj
+-50 0 Td
+50 274 Td (2. Mark shell axis datum A, end planes B/C, equator plane D, and index zero E.) Tj
+-50 0 Td
+50 260 Td (3. Print or laser a 1:1 wrap template once CAD is verified.) Tj
+-50 0 Td
+50 246 Td (4. Place all eight tongues in a single ring around the equator for V1.) Tj
+-50 0 Td
+50 232 Td (5. Start each tongue about 5 percent long so it tunes flat and can be shortened upward.) Tj
+-50 0 Td
+50 218 Td () Tj
+-50 0 Td
+50 204 Td (Phase 5 - Tongue Cutting) Tj
+-50 0 Td
+50 190 Td () Tj
+-50 0 Td
+50 176 Td (1. Test the exact 1/8 in bit and slit depth on a scrap coupon.) Tj
+-50 0 Td
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 27 0 R >> >> /Contents 26 0 R >>
+endobj
+26 0 obj
+<< /Length 2715 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+50 750 Td (2. Mount the shell in the V-block cradle.) Tj
+-50 0 Td
+50 736 Td (3. Clamp so the final operation cannot release the shell.) Tj
+-50 0 Td
+50 722 Td (4. Cut one tongue at a time.) Tj
+-50 0 Td
+50 708 Td (5. Rotate the shell to the next index mark and re-check datum alignment.) Tj
+-50 0 Td
+50 694 Td (6. Leave tabs or bridges only in non-vibrating areas if the CNC strategy requires them.) Tj
+-50 0 Td
+50 680 Td (7. Deburr slits lightly without changing active tongue length.) Tj
+-50 0 Td
+50 666 Td () Tj
+-50 0 Td
+50 652 Td (Phase 6 - Tuning) Tj
+-50 0 Td
+50 638 Td () Tj
+-50 0 Td
+50 624 Td (1. Measure every rough-cut tongue before trimming.) Tj
+-50 0 Td
+50 610 Td (2. Tune from bass to treble.) Tj
+-50 0 Td
+50 596 Td (3. To raise pitch, shorten at the tongue tip.) Tj
+-50 0 Td
+50 582 Td (4. To lower pitch, thin near the tongue root with caution.) Tj
+-50 0 Td
+50 568 Td (5. Record before/after Hz, temperature, humidity, and strike tool in validation.csv.) Tj
+-50 0 Td
+50 554 Td (6. Stop when every note is within +/- 5 cents or when the remaining correction would risk) Tj
+-50 0 Td
+50 540 Td (structural damage.) Tj
+-50 0 Td
+50 526 Td () Tj
+-50 0 Td
+50 512 Td (Phase 7 - End Configuration Tests) Tj
+-50 0 Td
+50 498 Td () Tj
+-50 0 Td
+50 484 Td (1. Test the sealed body first if solid caps are installed.) Tj
+-50 0 Td
+50 470 Td (2. Test one-port response if the port cap is available.) Tj
+-50 0 Td
+50 456 Td (3. Test the goatskin or synthetic head option only after the bearing edge and hardware are) Tj
+-50 0 Td
+50 442 Td (confirmed.) Tj
+-50 0 Td
+50 428 Td (4. Record sustain, loudness, body resonance, and player feel for each configuration.) Tj
+-50 0 Td
+50 414 Td () Tj
+-50 0 Td
+50 400 Td (Phase 8 - Finish And Support) Tj
+-50 0 Td
+50 386 Td () Tj
+-50 0 Td
+50 372 Td (1. Sand 80, 120, 180, 220, 320, and 400 grit as needed.) Tj
+-50 0 Td
+50 358 Td (2. Avoid heavy finish on active tongue surfaces.) Tj
+-50 0 Td
+50 344 Td (3. Apply 2-3 light coats of the selected finish on scrap first.) Tj
+-50 0 Td
+50 330 Td (4. Add rubber feet or a cradle stand so the cylinder cannot roll during play.) Tj
+-50 0 Td
+50 316 Td (5. Take process and finished photos listed in photo-shotlist.md.) Tj
+-50 0 Td
+50 302 Td () Tj
+-50 0 Td
+50 288 Td (Maintenance) Tj
+-50 0 Td
+50 274 Td () Tj
+-50 0 Td
+50 260 Td (- Store away from extreme humidity swings.) Tj
+-50 0 Td
+50 246 Td (- Re-check tuning after finish cure and after the first week of playing.) Tj
+-50 0 Td
+50 232 Td (- If a tongue cracks, preserve the piece and log the failure mode before repair.) Tj
+-50 0 Td
+50 218 Td () Tj
+-50 0 Td
+50 204 Td (div class="page-break"/div) Tj
+-50 0 Td
+50 190 Td () Tj
+-50 0 Td
+50 176 Td (validation.csv) Tj
+-50 0 Td
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 28
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000196 00000 n 
+0000000323 00000 n 
+0000002860 00000 n 
+0000002987 00000 n 
+0000005541 00000 n 
+0000005668 00000 n 
+0000008462 00000 n 
+0000008590 00000 n 
+0000010980 00000 n 
+0000011109 00000 n 
+0000014009 00000 n 
+0000014138 00000 n 
+0000017594 00000 n 
+0000017723 00000 n 
+0000021659 00000 n 
+0000021788 00000 n 
+0000025604 00000 n 
+0000025733 00000 n 
+0000028646 00000 n 
+0000028775 00000 n 
+0000031515 00000 n 
+0000031644 00000 n 
+0000034576 00000 n 
+0000034705 00000 n 
+0000037473 00000 n 
+trailer
+<< /Size 28 /Root 1 0 R >>
+startxref
+37544
+%%EOF

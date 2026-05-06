@@ -1,0 +1,13 @@
+measurement_id,variant,note,midi,target_hz,predicted_length_in,measured_hz,cents_error,tolerance_cents,environment,result,action
+V-001,DNT-MEDIUM,C4,60,261.63,6.834,,,5,TBD,pending,Measure scrap C4 tongue before shell cut
+V-002,DNT-MEDIUM,Eb4,63,311.13,6.267,,,5,TBD,pending,Measure after rough cut and after tuning
+V-003,DNT-MEDIUM,F4,65,349.23,5.915,,,5,TBD,pending,Measure after rough cut and after tuning
+V-004,DNT-MEDIUM,G4,67,392.00,5.583,,,5,TBD,pending,Measure after rough cut and after tuning
+V-005,DNT-MEDIUM,Ab4,68,415.30,5.424,,,5,TBD,pending,Measure after rough cut and after tuning
+V-006,DNT-MEDIUM,Bb4,70,466.16,5.120,,,5,TBD,pending,Measure after rough cut and after tuning
+V-007,DNT-MEDIUM,C5,72,523.25,4.832,,,5,TBD,pending,Measure after rough cut and after tuning
+V-008,DNT-MEDIUM,Eb5,75,622.25,4.431,,,5,TBD,pending,Measure after rough cut and after tuning
+V-009,DNT-MEDIUM,sealed-body-formula,,214.23,,,,20,TBD,pending,Verify against Excel and impulse response
+V-010,DNT-MEDIUM,stopped-pipe-one-port,,211.75,,,,20,TBD,pending,Test one-port body response if Config B is built
+V-011,DNT-MEDIUM,open-pipe-two-port,,423.50,,,,20,TBD,pending,Test two-port body response if Config C is built
+V-012,DNT-MEDIUM,drumhead-body-response,,,,,,20,TBD,pending,Record membrane tuning and coupled tone if Config D is built

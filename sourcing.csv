@@ -1,0 +1,11 @@
+source_id,item_id,component,specification,required_match,supplier_candidate,search_terms,url,date_checked,unit_price_usd,minimum_order,lead_time,substitution_risk,notes
+S-001,B-001,Padauk stave stock,"Stable straight-grained hardwood, enough for 12 staves plus spares",species and grain direction,lumber supplier,"padauk lumber 4/4 5/4 straight grain",,,,,Medium,"If cherry/maple is used, update K constant and validation rows"
+S-002,B-002,End cap blanks,"13 in square hardwood panels, 0.75 in thick",dimensions,lumber supplier,"padauk panel blank 13x13 3/4",,,,,Low,"Can be face-glued from narrower boards"
+S-003,B-003,Port tube,"3 in diameter tube, about 1 in neck length",diameter if ported,hardware supplier,"3 inch pvc pipe wood tube",,,,,Medium,"Port material may affect finish look but not primary tongue tuning"
+S-004,B-004,Goatskin rawhide,"16 in or larger round skin for 12 in shell",size and condition,drum parts supplier,"16 inch goatskin rawhide drum head",,,,,Medium,"Must be checked live before purchase"
+S-005,B-005,Rope tuning hardware,"Rope, rings, pullers sized for 12 in shell",fit,drum parts supplier,"djembe rope tuning ring 12 inch",,,,,High,"Hardware geometry must be frozen before drilling or rim detailing"
+S-006,B-006,1/8 in upcut bit,"Carbide spiral bit, 0.125 in kerf, suitable stickout",diameter and shank,CNC tooling supplier,"1/8 inch carbide upcut spiral router bit",,,,,Medium,"Bit deflection will affect slit width and tuning"
+S-007,B-007,V-block fixture stock,"Flat MDF/plywood, clamps, registration/index hardware",fixture rigidity,shop stock,"MDF CNC fixture V block clamps",,,,,Low,"Make in shop from scrap if stock is flat"
+S-008,B-008,Rubber feet or cradle stand,"Non-marring feet or hardwood support cradle",stability,hardware supplier,"rubber feet instrument bumper cradle",,,,,Low,"Cradle is safer for rolling cylinder"
+S-009,B-009,Wood glue,"Water-resistant wood glue with enough open time",bond quality,hardware supplier,"Titebond III wood glue",,,,,Low,"Glue-line stability matters because tongues are cut across the shell"
+S-010,B-010,Finish system,"Low-build oil or lacquer, compatible with struck wood",finish behavior,hardware supplier,"tung oil instrument finish lacquer",,,,,Medium,"Finish must be tested on scrap tongue coupon"

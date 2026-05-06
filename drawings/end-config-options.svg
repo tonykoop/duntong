@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1100" height="720" fill="white" stroke="black"/>
+  <text x="40" y="44" font-size="24" font-weight="700">Duntong End Configuration Options</text>
+  <text x="40" y="70" font-size="13">Preserve these as design variants. Do not collapse them into one undocumented geometry.</text>
+
+  <g id="sealed">
+    <rect x="60" y="120" width="450" height="220" fill="#fffaf2" stroke="black"/>
+    <text x="80" y="150" font-size="16" font-weight="700">A. Both Ends Solid</text>
+    <rect x="130" y="210" width="300" height="70" rx="35" fill="#f7efe6" stroke="black" stroke-width="2"/>
+    <line x1="130" y1="210" x2="130" y2="280" stroke="black" stroke-width="5"/>
+    <line x1="430" y1="210" x2="430" y2="280" stroke="black" stroke-width="5"/>
+    <text x="80" y="310" font-size="12">Model: Helmholtz-like cavity using tongue slits as neck openings.</text>
+    <text x="80" y="328" font-size="12">Use: warm sustaining melodic baseline.</text>
+  </g>
+
+  <g id="one-port">
+    <rect x="590" y="120" width="450" height="220" fill="#fffaf2" stroke="black"/>
+    <text x="610" y="150" font-size="16" font-weight="700">B. One Port + One Solid</text>
+    <rect x="660" y="210" width="300" height="70" rx="35" fill="#f7efe6" stroke="black" stroke-width="2"/>
+    <line x1="660" y1="210" x2="660" y2="280" stroke="black" stroke-width="5"/>
+    <circle cx="960" cy="245" r="24" fill="white" stroke="black" stroke-width="3"/>
+    <text x="610" y="310" font-size="12">Model: stopped pipe first pass, f = c / (4L).</text>
+    <text x="610" y="328" font-size="12">Medium workbook first pass: about 211.75 Hz.</text>
+  </g>
+
+  <g id="two-port">
+    <rect x="60" y="390" width="450" height="220" fill="#fffaf2" stroke="black"/>
+    <text x="80" y="420" font-size="16" font-weight="700">C. Two Ports</text>
+    <rect x="130" y="480" width="300" height="70" rx="35" fill="#f7efe6" stroke="black" stroke-width="2"/>
+    <circle cx="130" cy="515" r="24" fill="white" stroke="black" stroke-width="3"/>
+    <circle cx="430" cy="515" r="24" fill="white" stroke="black" stroke-width="3"/>
+    <text x="80" y="580" font-size="12">Model: open pipe first pass, f = c / (2L).</text>
+    <text x="80" y="598" font-size="12">Medium workbook first pass: about 423.50 Hz.</text>
+  </g>
+
+  <g id="drumhead">
+    <rect x="590" y="390" width="450" height="220" fill="#fffaf2" stroke="black"/>
+    <text x="610" y="420" font-size="16" font-weight="700">D. One Or Both Drumheads</text>
+    <rect x="660" y="480" width="300" height="70" rx="35" fill="#f7efe6" stroke="black" stroke-width="2"/>
+    <line x1="660" y1="480" x2="660" y2="550" stroke="#555" stroke-width="4"/>
+    <line x1="960" y1="480" x2="960" y2="550" stroke="#555" stroke-width="4"/>
+    <path d="M660 480 C720 455 900 455 960 480" fill="none" stroke="#8b4513" stroke-width="3"/>
+    <path d="M660 550 C720 575 900 575 960 550" fill="none" stroke="#8b4513" stroke-width="3"/>
+    <text x="610" y="580" font-size="12">Model: membrane plus cantilever hybrid.</text>
+    <text x="610" y="598" font-size="12">Use: closest to the dundun-inspired duntong intent.</text>
+  </g>
+
+  <g id="title-block">
+    <rect x="40" y="635" width="520" height="55" fill="white" stroke="black"/>
+    <text x="55" y="657" font-size="11">Critical dimensions: medium OD 12.000 in, ID 11.000 in, wall 0.500 in, port option 3.000 in diameter.</text>
+    <text x="55" y="678" font-size="11">Revision: v4.2 draft, 2026-05-06. Verify actual head/hoop hardware before drilling or rim details.</text>
+  </g>
+</svg>

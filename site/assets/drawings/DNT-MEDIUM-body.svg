@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="800" height="420" fill="white" stroke="black" stroke-width="1"/>
+<ellipse cx="278.0" cy="210.0" rx="137.98956442827236" ry="96.59269509979065" fill="#fafafa" stroke="black" stroke-width="1.5"/>
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#bbb" stroke-width="0.5"/></pattern></defs>
+<rect x="265.58093920145546" y="101.40730490020935" width="24.838121597089025" height="14" fill="white" stroke="black" stroke-width="1"/>
+<text x="265.58093920145546" y="95.40730490020935" font-size="9">port (mouth)</text>
+<circle cx="278.0" cy="330.59269509979066" r="9" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="278.0" y="334.59269509979066" font-size="11" text-anchor="middle" font-weight="bold">A</text>
+<circle cx="140.01043557172764" cy="210.0" r="9" fill="white" stroke="black" stroke-width="1.5"/>
+<text x="140.01043557172764" y="214.0" font-size="11" text-anchor="middle" font-weight="bold">B</text>
+<line x1="140.01043557172764" y1="338.59269509979066" x2="415.9895644282724" y2="338.59269509979066" stroke="black" stroke-width="1"/><line x1="140.01043557172764" y1="356.59269509979066" x2="140.01043557172764" y2="334.59269509979066" stroke="black" stroke-width="1"/><line x1="415.9895644282724" y1="356.59269509979066" x2="415.9895644282724" y2="334.59269509979066" stroke="black" stroke-width="1"/><polygon points="140.01043557172764,338.59269509979066 145.01043557172764,335.59269509979066 145.01043557172764,341.59269509979066" fill="black"/><polygon points="415.9895644282724,338.59269509979066 410.9895644282724,335.59269509979066 410.9895644282724,341.59269509979066" fill="black"/><text x="278.0" y="332.59269509979066" font-size="11" text-anchor="middle">OD 23.00"</text>
+<line x1="445.9895644282724" y1="113.40730490020935" x2="445.9895644282724" y2="306.59269509979066" stroke="black" stroke-width="1"/><line x1="427.9895644282724" y1="113.40730490020935" x2="449.9895644282724" y2="113.40730490020935" stroke="black" stroke-width="1"/><line x1="427.9895644282724" y1="306.59269509979066" x2="449.9895644282724" y2="306.59269509979066" stroke="black" stroke-width="1"/><text x="455.9895644282724" y="214.0" font-size="11">H 16.10"</text>
+<text x="24" y="48" font-size="14" font-weight="bold">Duntong Build Design — DNT-MEDIUM</text>
+<text x="24" y="68" font-size="11" fill="#444">Helmholtz vessel — V≈1520.5 cu.in., target f≈261.6 Hz</text>
+<text x="24" y="386" font-size="9" fill="#666">Section view. Wall thickness per design.md. Hatched interior = chamber.</text>
+<rect x="556" y="24" width="220" height="200" fill="white" stroke="black" stroke-width="1"/>
+<line x1="556" y1="24.0" x2="776" y2="24.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="24.0" x2="633.0" y2="49.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="41.5" font-size="9" fill="#444">INSTRUMENT</text>
+<text x="639.2" y="41.5" font-size="10" fill="black">Duntong Build Design</text>
+<line x1="556" y1="49.0" x2="776" y2="49.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="49.0" x2="633.0" y2="74.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="66.5" font-size="9" fill="#444">MEMBER</text>
+<text x="639.2" y="66.5" font-size="10" fill="black">DNT-MEDIUM</text>
+<line x1="556" y1="74.0" x2="776" y2="74.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="74.0" x2="633.0" y2="99.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="91.5" font-size="9" fill="#444">SCALE</text>
+<text x="639.2" y="91.5" font-size="10" fill="black">1:1 (illustrative)</text>
+<line x1="556" y1="99.0" x2="776" y2="99.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="99.0" x2="633.0" y2="124.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="116.5" font-size="9" fill="#444">UNITS</text>
+<text x="639.2" y="116.5" font-size="10" fill="black">inches</text>
+<line x1="556" y1="124.0" x2="776" y2="124.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="124.0" x2="633.0" y2="149.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="141.5" font-size="9" fill="#444">REV</text>
+<text x="639.2" y="141.5" font-size="10" fill="black">v4</text>
+<line x1="556" y1="149.0" x2="776" y2="149.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="149.0" x2="633.0" y2="174.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="166.5" font-size="9" fill="#444">DATE</text>
+<text x="639.2" y="166.5" font-size="10" fill="black">2026-05-05</text>
+<line x1="556" y1="174.0" x2="776" y2="174.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="174.0" x2="633.0" y2="199.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="191.5" font-size="9" fill="#444">AUTHOR</text>
+<text x="639.2" y="191.5" font-size="10" fill="black">Tony Koop</text>
+<line x1="556" y1="199.0" x2="776" y2="199.0" stroke="black" stroke-width="0.5"/>
+<line x1="633.0" y1="199.0" x2="633.0" y2="224.0" stroke="black" stroke-width="0.5"/>
+<text x="560" y="216.5" font-size="9" fill="#444">SHEET</text>
+<text x="639.2" y="216.5" font-size="10" fill="black">1 / 1</text>
+</svg>

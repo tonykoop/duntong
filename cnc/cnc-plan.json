@@ -1,0 +1,118 @@
+{
+  "schema": "instrument-maker-v4.2-cnc-plan",
+  "generated_on": "2026-05-06",
+  "packet": ".",
+  "family": "duntong-hybrid",
+  "machine_note": "Pre-CAM plan for a stave-shell cylindrical tongue drum. Verify actual CNC router, lathe swing, clamps, feed/speed, bit stickout, and air-cut before machining.",
+  "assumptions": [
+    "This is not G-code.",
+    "V1 target is the medium 12 in OD x 16 in long stave-cylinder prototype.",
+    "Tongue pitches depend on final wall thickness, so stock prep and turning checks are tuning-critical.",
+    "The CNC tongue operation needs either a rigid V-block with rotary indexing or a true rotary axis."
+  ],
+  "operations": [
+    {
+      "op_id": "OP-010",
+      "name": "Review workbook, drawings, and datums",
+      "machine": "Bench",
+      "tool": "Calipers, flexible tape, square, marker",
+      "workholding": "Flat bench",
+      "datum": "Shell axis A, left end B, right end C, equator D, index zero E",
+      "inputs": ["design.md", "drawing-brief.md", "family-spec.csv"],
+      "outputs": ["marked datum checklist"],
+      "checks": ["C minor vs D minor decision visible", "End configuration selected or marked TBD", "No CAM until SolidWorks unwrap is reviewed"],
+      "notes": "Preserve all TBDs instead of burying them in CAM assumptions."
+    },
+    {
+      "op_id": "OP-110",
+      "name": "Cut and thickness stave blanks",
+      "machine": "Table saw, jointer, planer, drum sander",
+      "tool": "Sharp rip/crosscut blade, planer knives, calipers",
+      "workholding": "Miter sled, featherboard, push blocks",
+      "datum": "Outside face and long edge of each stave",
+      "inputs": ["cut-list.csv", "bom.csv"],
+      "outputs": ["12 staves plus spare coupons"],
+      "checks": ["15 deg miter verified on scrap", "Thickness recorded for every stave", "Straight grain along shell length"],
+      "notes": "Cut extra stock for destructive tongue and finish tests."
+    },
+    {
+      "op_id": "OP-210",
+      "name": "Glue stave cylinder",
+      "machine": "Bench",
+      "tool": "Band clamps, hose clamps, cauls, glue brush",
+      "workholding": "Round clamp-up with two-half-shell option",
+      "datum": "Shell axis A established by roundness checks",
+      "inputs": ["assembly-manual.md"],
+      "outputs": ["cured cylindrical shell blank"],
+      "checks": ["Glue gaps inspected", "Roundness checked before cure", "Seam positions logged for tongue layout"],
+      "notes": "Tongue roots should avoid weak seam locations where possible."
+    },
+    {
+      "op_id": "OP-310",
+      "name": "Turn shell to OD, ID, and wall thickness",
+      "machine": "Wood lathe",
+      "tool": "Bowl gouge, scraper, calipers, wall-thickness gauge",
+      "workholding": "Chuck/faceplate with tailstock support as appropriate",
+      "datum": "Shell axis A",
+      "inputs": ["drawings/section-view.svg"],
+      "outputs": ["12 in OD, 11 in ID, 0.5 in wall shell"],
+      "checks": ["Wall thickness within tuning tolerance", "Ends square to axis", "No thin spots below 0.5 in before tongue cuts"],
+      "notes": "Final wall is the tongue thickness in f = K*t/L^2."
+    },
+    {
+      "op_id": "OP-410",
+      "name": "Prepare end configuration",
+      "machine": "Lathe, drill press, band saw, bench",
+      "tool": "Forstner bits, hole saw, turning tools, sanding blocks",
+      "workholding": "End-cap fixture or rim support",
+      "datum": "End planes B and C",
+      "inputs": ["drawings/end-config-options.svg", "bom.csv"],
+      "outputs": ["sealed caps, ported cap, or drumhead-ready rim"],
+      "checks": ["Port diameter and neck length measured if ported", "Bearing edge smooth if drumheaded", "Cap fit tested before glue"],
+      "notes": "Do not drill hardware for drumhead until the actual hardware is sourced."
+    },
+    {
+      "op_id": "OP-510",
+      "name": "Create wrap template and index plan",
+      "machine": "Laser cutter, printer, or SolidWorks drawing export",
+      "tool": "Paper template, laser-safe sheet, marking knife",
+      "workholding": "Template taped to shell with index zero",
+      "datum": "Equator plane D and index zero E",
+      "inputs": ["drawings/tongue-layout.svg", "cad/design-table-inputs.csv"],
+      "outputs": ["1:1 tongue wrap template"],
+      "checks": ["Circumference is 37.699 in for medium", "Eight index steps at 45 deg", "Tongue lengths include tuning trim allowance"],
+      "notes": "SolidWorks unwrap should replace the temporary SVG-derived template."
+    },
+    {
+      "op_id": "OP-610",
+      "name": "CNC cut tongue slits",
+      "machine": "CNC router",
+      "tool": "1/8 in upcut spiral bit",
+      "workholding": "Rigid V-block cradle, clamps clear of toolpath, rotary index marks",
+      "datum": "Shell axis A, equator D, index zero E",
+      "inputs": ["cad/SolidWorks-MasterLayout-Plan.md", "drawings/tongue-layout.svg"],
+      "outputs": ["rough-cut eight-tongue shell"],
+      "checks": ["Air-cut complete", "Bit deflection checked on coupon", "Shell cannot rotate/slip during final cut", "No tongue crosses a weak seam without approval"],
+      "notes": "Cut one tongue, re-index, re-clamp, and verify before the next cut unless a true rotary axis is used."
+    },
+    {
+      "op_id": "OP-710",
+      "name": "Tune tongues and validate body coupling",
+      "machine": "Bench",
+      "tool": "Chromatic tuner, microphone, file, Dremel, sanding block",
+      "workholding": "Padded cradle or stand",
+      "datum": "Tongue root and tip marks",
+      "inputs": ["validation.csv"],
+      "outputs": ["updated validation.csv", "measured tuning notes"],
+      "checks": ["Every tongue has measured Hz", "Cents error computed", "End configuration response logged", "Finish shift measured after cure"],
+      "notes": "Shorten tongue tip to raise pitch. Thin near root only with caution."
+    }
+  ],
+  "release_checks": [
+    "Every operation has a datum and workholding method.",
+    "CNC operations have a fixture and clamp plan.",
+    "All tuning-critical dimensions include measurement checkpoints.",
+    "No file claims to be verified CAM or G-code.",
+    "Validation.csv is updated after prototype measurements."
+  ]
+}

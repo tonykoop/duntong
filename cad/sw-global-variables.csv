@@ -1,0 +1,24 @@
+name,value,unit,description
+Shell_OD,12.000,in,Medium shell outside diameter
+Shell_ID,11.000,in,Medium shell inside diameter
+Shell_Length,16.000,in,Overall cylinder length including end interfaces
+Wall_Thickness,0.500,in,Also tongue thickness
+Tongue_Count,8,count,Pentatonic minor plus octave/upper third
+Tongue_Width,1.500,in,Width affects volume and sustain more than pitch
+Slit_Width,0.125,in,Nominal 1/8 in upcut kerf
+Root_MIDI,60,count,C4 workbook baseline
+K_Cantilever,24438,Hz*in,Padauk imperial cantilever constant
+Stave_Count,12,count,V1 stave cylinder
+Stave_Miter,15.000,deg,180 / 12
+Stave_Outer_Arc,3.142,in,pi * OD / 12 at outer face
+Tongue_Band_Offset,0.000,in,Equator plane for single-ring V1
+Index_Step,45.000,deg,360 / 8 tongues
+Port_Diameter,3.000,in,Ported option for medium body
+End_Cap_Thickness,0.750,in,Sealed end cap blank thickness
+Rabbet_Depth,0.250,in,Assumed end cap seating depth
+Tuning_Trim_Allowance,5,percent,Start tongues long/flat before tuning
+Datum_A,0,text,Shell axis
+Datum_B,0,text,Left end plane
+Datum_C,0,text,Right end plane
+Datum_D,0,text,Tongue equator plane
+Datum_E,0,text,Index zero radial plane

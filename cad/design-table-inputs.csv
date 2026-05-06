@@ -1,0 +1,5 @@
+configuration,shell_outer_diameter_in,shell_length_in,wall_thickness_in,inner_diameter_in,tongue_count,tongue_width_in,slit_width_in,root_midi,k_cantilever,stave_count,stave_miter_deg,end_config,port_diameter_in,tuning_trim_allowance_pct
+DNT-HANDHELD,6.000,9.000,0.375,5.250,8,1.000,0.125,72,24438,12,15.000,solid,2.000,5
+DNT-MEDIUM-SEALED,12.000,16.000,0.500,11.000,8,1.500,0.125,60,24438,12,15.000,solid,0.000,5
+DNT-MEDIUM-PORTED,12.000,16.000,0.500,11.000,8,1.500,0.125,60,24438,12,15.000,one_port,3.000,5
+DNT-MEDIUM-DRUMHEAD,12.000,16.000,0.500,11.000,8,1.500,0.125,60,24438,12,15.000,drumhead,TBD,5

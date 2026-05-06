@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="760" fill="white" stroke="black"/>
+  <text x="40" y="44" font-size="24" font-weight="700">Duntong Tongue Layout - Medium Single Ring</text>
+  <text x="40" y="70" font-size="13">Unwrapped cylinder concept. Final CAM requires SolidWorks wrapped/projected sketch and fixture verification.</text>
+
+  <g id="unwrap">
+    <rect x="70" y="130" width="900" height="380" fill="#fffaf2" stroke="black" stroke-width="2"/>
+    <line x1="70" y1="320" x2="970" y2="320" stroke="#555" stroke-dasharray="8 4"/>
+    <text x="76" y="124" font-size="12">Unwrapped circumference = 37.699 in</text>
+    <text x="76" y="535" font-size="12">Cylinder length = 16.000 in; tongue ring centered on equator datum D</text>
+    <line x1="70" y1="548" x2="970" y2="548" stroke="black"/>
+    <line x1="70" y1="510" x2="70" y2="560" stroke="black"/>
+    <line x1="970" y1="510" x2="970" y2="560" stroke="black"/>
+    <polygon points="70,548 80,543 80,553" fill="black"/>
+    <polygon points="970,548 960,543 960,553" fill="black"/>
+    <text x="475" y="542" font-size="13">37.699 wrap length</text>
+
+    <g fill="none" stroke="#8b4513" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M124 320 v-160 h36 v160"/>
+      <path d="M237 320 v-147 h36 v147"/>
+      <path d="M349 320 v-139 h36 v139"/>
+      <path d="M462 320 v-131 h36 v131"/>
+      <path d="M574 320 v-127 h36 v127"/>
+      <path d="M687 320 v-120 h36 v120"/>
+      <path d="M799 320 v-113 h36 v113"/>
+      <path d="M912 320 v-104 h36 v104"/>
+    </g>
+
+    <g font-size="12" text-anchor="middle">
+      <text x="142" y="145">C4</text>
+      <text x="255" y="158">Eb4</text>
+      <text x="367" y="166">F4</text>
+      <text x="480" y="174">G4</text>
+      <text x="592" y="178">Ab4</text>
+      <text x="705" y="185">Bb4</text>
+      <text x="817" y="193">C5</text>
+      <text x="930" y="202">Eb5</text>
+      <text x="142" y="350">6.834 in</text>
+      <text x="255" y="350">6.267 in</text>
+      <text x="367" y="350">5.915 in</text>
+      <text x="480" y="350">5.583 in</text>
+      <text x="592" y="350">5.424 in</text>
+      <text x="705" y="350">5.120 in</text>
+      <text x="817" y="350">4.832 in</text>
+      <text x="930" y="350">4.431 in</text>
+    </g>
+
+    <g stroke="#777" stroke-dasharray="3 3">
+      <line x1="182" y1="130" x2="182" y2="510"/>
+      <line x1="295" y1="130" x2="295" y2="510"/>
+      <line x1="407" y1="130" x2="407" y2="510"/>
+      <line x1="520" y1="130" x2="520" y2="510"/>
+      <line x1="632" y1="130" x2="632" y2="510"/>
+      <line x1="745" y1="130" x2="745" y2="510"/>
+      <line x1="857" y1="130" x2="857" y2="510"/>
+    </g>
+    <text x="76" y="595" font-size="12">Index step = 45 deg. Tongue width = 1.500 in. Slit width = 0.125 in. Start about 5 percent long/flat for tuning trim.</text>
+  </g>
+
+  <g id="schedule">
+    <rect x="1010" y="130" width="150" height="380" fill="white" stroke="black"/>
+    <text x="1020" y="154" font-size="13" font-weight="700">Schedule</text>
+    <text x="1020" y="182" font-size="11">1 C4 261.63 Hz</text>
+    <text x="1020" y="207" font-size="11">2 Eb4 311.13 Hz</text>
+    <text x="1020" y="232" font-size="11">3 F4 349.23 Hz</text>
+    <text x="1020" y="257" font-size="11">4 G4 392.00 Hz</text>
+    <text x="1020" y="282" font-size="11">5 Ab4 415.30 Hz</text>
+    <text x="1020" y="307" font-size="11">6 Bb4 466.16 Hz</text>
+    <text x="1020" y="332" font-size="11">7 C5 523.25 Hz</text>
+    <text x="1020" y="357" font-size="11">8 Eb5 622.25 Hz</text>
+    <text x="1020" y="395" font-size="11">K = 24438</text>
+    <text x="1020" y="420" font-size="11">t = 0.500 in</text>
+    <text x="1020" y="445" font-size="11">root MIDI 60</text>
+  </g>
+
+  <g id="title-block">
+    <rect x="820" y="570" width="340" height="140" fill="white" stroke="black"/>
+    <line x1="820" y1="605" x2="1160" y2="605" stroke="black"/>
+    <line x1="820" y1="640" x2="1160" y2="640" stroke="black"/>
+    <line x1="820" y1="675" x2="1160" y2="675" stroke="black"/>
+    <line x1="950" y1="570" x2="950" y2="710" stroke="black"/>
+    <text x="830" y="593" font-size="10">PART</text><text x="960" y="593" font-size="11">Tongue layout</text>
+    <text x="830" y="628" font-size="10">UNITS</text><text x="960" y="628" font-size="11">inches</text>
+    <text x="830" y="663" font-size="10">REV/DATE</text><text x="960" y="663" font-size="11">v4.2 / 2026-05-06</text>
+    <text x="830" y="698" font-size="10">STATUS</text><text x="960" y="698" font-size="11">Pre-CAD unwrap</text>
+  </g>
+</svg>

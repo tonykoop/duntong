@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1100" height="720" fill="white" stroke="black"/>
+  <text x="40" y="44" font-size="24" font-weight="700">Duntong Body Overview</text>
+  <text x="40" y="70" font-size="13">Original cylindrical tongue drum concept by Tony Koop. Units: inches. Source: duntong-design-table.xlsx, sheet Duntong.</text>
+
+  <g id="medium-side-view">
+    <text x="60" y="120" font-size="16" font-weight="700">DNT-MEDIUM V1 - side view</text>
+    <rect x="130" y="170" width="560" height="180" rx="90" ry="90" fill="#f7efe6" stroke="black" stroke-width="2"/>
+    <line x1="130" y1="260" x2="690" y2="260" stroke="#555" stroke-dasharray="8 4"/>
+    <line x1="410" y1="145" x2="410" y2="375" stroke="#555" stroke-dasharray="8 4"/>
+    <text x="700" y="265" font-size="12">Datum A: shell axis</text>
+    <text x="420" y="150" font-size="12">Datum D: tongue equator</text>
+    <line x1="130" y1="386" x2="690" y2="386" stroke="black"/>
+    <line x1="130" y1="350" x2="130" y2="400" stroke="black"/>
+    <line x1="690" y1="350" x2="690" y2="400" stroke="black"/>
+    <polygon points="130,386 140,381 140,391" fill="black"/>
+    <polygon points="690,386 680,381 680,391" fill="black"/>
+    <text x="375" y="380" font-size="13">16.000 overall length</text>
+    <line x1="720" y1="170" x2="720" y2="350" stroke="black"/>
+    <line x1="690" y1="170" x2="735" y2="170" stroke="black"/>
+    <line x1="690" y1="350" x2="735" y2="350" stroke="black"/>
+    <text x="735" y="265" font-size="13">12.000 OD</text>
+    <circle cx="130" cy="260" r="13" fill="white" stroke="black"/>
+    <text x="126" y="264" font-size="12" font-weight="700">B</text>
+    <circle cx="690" cy="260" r="13" fill="white" stroke="black"/>
+    <text x="686" y="264" font-size="12" font-weight="700">C</text>
+    <circle cx="410" cy="260" r="13" fill="white" stroke="black"/>
+    <text x="406" y="264" font-size="12" font-weight="700">A</text>
+  </g>
+
+  <g id="medium-end-view">
+    <text x="60" y="455" font-size="16" font-weight="700">DNT-MEDIUM end view</text>
+    <circle cx="210" cy="565" r="90" fill="#f7efe6" stroke="black" stroke-width="2"/>
+    <circle cx="210" cy="565" r="82.5" fill="white" stroke="black" stroke-width="1.5"/>
+    <line x1="120" y1="565" x2="300" y2="565" stroke="#555" stroke-dasharray="8 4"/>
+    <line x1="210" y1="475" x2="210" y2="655" stroke="#555" stroke-dasharray="8 4"/>
+    <text x="315" y="540" font-size="12">OD 12.000</text>
+    <text x="315" y="560" font-size="12">ID 11.000</text>
+    <text x="315" y="580" font-size="12">wall/tongue t 0.500</text>
+    <text x="315" y="600" font-size="12">12 staves, 15 deg miter</text>
+    <text x="315" y="620" font-size="12">8 tongues, 45 deg index step</text>
+  </g>
+
+  <g id="handheld-summary">
+    <text x="500" y="455" font-size="16" font-weight="700">DNT-HANDHELD reference</text>
+    <rect x="520" y="505" width="315" height="110" rx="55" ry="55" fill="#f7efe6" stroke="black" stroke-width="1.5"/>
+    <line x1="520" y1="640" x2="835" y2="640" stroke="black"/>
+    <line x1="520" y1="615" x2="520" y2="650" stroke="black"/>
+    <line x1="835" y1="615" x2="835" y2="650" stroke="black"/>
+    <text x="635" y="634" font-size="12">9.000 length</text>
+    <text x="850" y="555" font-size="12">6.000 OD</text>
+    <text x="850" y="575" font-size="12">5.250 ID</text>
+    <text x="850" y="595" font-size="12">0.375 wall</text>
+  </g>
+
+  <g id="title-block">
+    <rect x="820" y="70" width="240" height="250" fill="white" stroke="black"/>
+    <line x1="820" y1="105" x2="1060" y2="105" stroke="black"/>
+    <line x1="820" y1="140" x2="1060" y2="140" stroke="black"/>
+    <line x1="820" y1="175" x2="1060" y2="175" stroke="black"/>
+    <line x1="820" y1="210" x2="1060" y2="210" stroke="black"/>
+    <line x1="820" y1="245" x2="1060" y2="245" stroke="black"/>
+    <line x1="920" y1="70" x2="920" y2="320" stroke="black"/>
+    <text x="828" y="93" font-size="10">INSTRUMENT</text><text x="930" y="93" font-size="11">Duntong</text>
+    <text x="828" y="128" font-size="10">PART</text><text x="930" y="128" font-size="11">Body overview</text>
+    <text x="828" y="163" font-size="10">UNITS</text><text x="930" y="163" font-size="11">inches</text>
+    <text x="828" y="198" font-size="10">REV</text><text x="930" y="198" font-size="11">v4.2 draft</text>
+    <text x="828" y="233" font-size="10">DATE</text><text x="930" y="233" font-size="11">2026-05-06</text>
+    <text x="828" y="268" font-size="10">SOURCE</text><text x="930" y="268" font-size="11">Duntong sheet</text>
+    <text x="828" y="303" font-size="10">STATUS</text><text x="930" y="303" font-size="11">Review drawing</text>
+  </g>
+
+  <text x="40" y="695" font-size="11">Default tolerance: +/-0.005 in for tongue length/thickness, +/-0.030 in for noncritical wood body features. Verify in SolidWorks before CAM.</text>
+</svg>

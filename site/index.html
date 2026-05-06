@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duntong Build Design — Tony Koop's Build Log</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="hero"><div class="hero-img" style="background:linear-gradient(135deg,#5c3517,#a0522d);height:360px;"></div><div class="hero-text"><h1>Duntong Build Design</h1><p>The duntong is Tony Koop&#x27;s original cylindrical tongue drum concept. It combines a dundun-like round body and optional drumhead/ported ends with wooden tongue drum voices cut directly into the shell wall.</p></div></header>
+<main>
+<section><h2>What this is</h2><p>The duntong is Tony Koop&#x27;s original cylindrical tongue drum concept. It combines a dundun-like round body and optional drumhead/ported ends with wooden tongue drum voices cut directly into the shell wall.</p>
+<p>The first build should answer three practical questions:</p>
+<p>1. Can a cylindrical stave shell hold predictable cantilever tongue pitches?
+2. Which end configuration gives the best musical balance: sealed, ported, or drumheaded?
+3. Can the V1 be manufactured safely with Tony&#x27;s available home-shop and Maker Nexus workflows before SolidWorks CAM exists?</p>
+<p>Mode A repo shape is used here: this is a single-instrument repository, so files live at the repo root and in conventional folders.</p></section>
+<section><h2>The design</h2><h3>Tongues</h3>
+<p>The primary pitch model is a fixed-free cantilever beam:</p>
+<p>```text
+f = K * t / L^2
+L = sqrt(K * t / f)
+```</p>
+<p>Where:</p>
+<ul><li>`f` is tongue fundamental frequency in Hz.</li><li>`K` is the material-specific imperial cantilever constant from the tongue-drum material library.</li><li>`t` is the shell wall thickness in inches. This is also the tongue thickness.</li><li>`L` is tongue length in inches.</li></ul>
+<p>For the workbook baseline, `K = 24438` for Padauk. The model assumes the tongue behaves like a flat cantilever. The workbook flags curvature as acceptable when tongue width divided by cylinder OD is less than or equal to 0.20. The handheld ratio is 1.0 / 6.0 = 0.167. The medium ratio is 1.5 / 12.0 = 0.125. Both are inside the first-pass range, but the curved shell may still raise pitch by about 2-5 percent and must be measured.</p>
+<h3>Body And End Coupling</h3>
+<p>The cylinder body is secondary coupling, not the main pitch source. Four end conditions are preserved as design variants:</p>
+<p>| Option | End condition | First-pass model | Musical character |
+|---|---|---|---|
+| A | Both ends solid | Helmholtz-like cavity using tongue slits as neck openings | Warm, focused sustain |
+| B | One port, one solid | Stopped pipe approximation | Deeper bass projection |
+| C | Two ports | Open pipe approximation | Brighter projection |
+| D | One or both drumheads | Membrane plus cantilever hybrid | Closest to dundun inspiration |</p>
+<p>Important guard rule: the NAF K2 bore correction does not apply to this instrument. Only cantilever beam K constants are used for tongue pitch. Helmholtz/stopped/open-pipe equations are exploration and validation targets for the body, not corrections to tongue length.</p>
+<h3>Worked Medium Example</h3>
+<p>For the medium prototype:</p>
+<p>```text
+OD = 12.000 in
+length = 16.000 in
+wall/tongue thickness = 0.500 in
+tongue width = 1.500 in
+slit width = 0.125 in
+K = 24438
+root MIDI = 60 (C4)
+```</p>
+<p>The C4 tongue prediction is:</p>
+<p>```text
+L = sqrt(24438 * 0.5 / 261.63) = 6.834 in
+```</p>
+<p>The medium shell circumference is `pi * 12 = 37.699 in`, allowing about 23 tongue-width-plus-slit slots. The requested 8 tongues fit.</p>
+<p>Using the workbook formula for sealed-body slit-area coupling:</p>
+<p>```text
+slit area = 8 * (0.125 * 1.5 + 2 * 0.125 * 3.0) = 7.5 in^2
+internal volume = pi * (11 / 2)^2 * 16 = 1520.5 in^3
+effective neck length = 0.5 in
+f_H = 13552 / (2*pi) * sqrt(7.5 / (1520.5 * 0.5)) = about 214 Hz
+```</p>
+<p>The workbook prose note also mentions 135 Hz for medium sealed coupling. That appears to be a stale or alternate-geometry note; keep it visible as a validation question rather than treating either value as proven.</p><figure><object data="assets/drawings/DNT-HANDHELD-body.svg" type="image/svg+xml" class="drawing"></object><figcaption>DNT-HANDHELD-body</figcaption></figure>
+<figure><object data="assets/drawings/DNT-MEDIUM-body.svg" type="image/svg+xml" class="drawing"></object><figcaption>DNT-MEDIUM-body</figcaption></figure>
+<figure><object data="assets/drawings/body-overview.svg" type="image/svg+xml" class="drawing"></object><figcaption>body-overview</figcaption></figure>
+<figure><object data="assets/drawings/end-config-options.svg" type="image/svg+xml" class="drawing"></object><figcaption>end-config-options</figcaption></figure>
+<figure><object data="assets/drawings/family-overview.svg" type="image/svg+xml" class="drawing"></object><figcaption>family-overview</figcaption></figure>
+<figure><object data="assets/drawings/section-view.svg" type="image/svg+xml" class="drawing"></object><figcaption>section-view</figcaption></figure>
+<figure><object data="assets/drawings/tongue-layout.svg" type="image/svg+xml" class="drawing"></object><figcaption>tongue-layout</figcaption></figure></section>
+<section><h2>The build</h2><h2>Duntong Assembly Manual</h2>
+<h3>Scope</h3>
+<p>This manual covers the DNT-MEDIUM V1 stave-cylinder prototype. It is not a CAM file and does not replace machine setup, feeds/speeds, or a SolidWorks drawing review.</p>
+<h3>Tools</h3>
+<ul><li>Table saw with accurate miter sled.</li><li>Jointer, planer, or drum sander.</li><li>Band clamps or hose clamps for round glue-up.</li><li>Wood lathe large enough for a 12 in OD shell.</li><li>Drill press or lathe setup for port/end work.</li><li>CNC router with 1/8 in upcut spiral bit, or hand-cut slit fallback.</li><li>Calipers, flexible tape, tuner, microphone/recorder, hygrometer.</li><li>Files, Dremel, sanding blocks, 80-400 grit abrasives.</li></ul>
+<h3>Phase 1 - Stock Prep</h3>
+<p>1. Confirm final V1 variant: sealed, ported, or drumheaded.
+2. Select straight-grained Padauk or alternate hardwood. Record species, moisture content if available, and board orientation.
+3. Rip at least 12 stave blanks plus 2 spares.
+4. Cut 15 deg miters for a 12-stave cylinder.
+5. Plane or sand all staves to a controlled thickness. Final shell wall is the tongue thickness, so record actual thickness at both ends of each stave.
+6. Use one spare stave to cut scrap tongue coupons before cutting the real shell.</p>
+<h3>Phase 2 - Shell Glue-Up</h3>
+<p>1. Dry-fit the 12 staves into a cylinder.
+2. Glue as two half-shells if that improves clamping control.
+3. Join half-shells into the full cylinder with band clamps.
+4. Check roundness with calipers before the glue sets.
+5. Let the shell cure fully before lathe work.</p>
+<h3>Phase 3 - Turning And End Prep</h3>
+<p>1. Mount the shell on the lathe with support appropriate to the current blank.
+2. True the outside to 12.000 in OD.
+3. Bore or turn the inside to 11.000 in ID, leaving a 0.500 in wall.
+4. Add end rabbets if sealed caps will be used.
+5. For a ported cap, drill or turn the port after the cap is stable.
+6. For a drumheaded end, leave enough rim/bearing-edge stock and do not drill hardware until the hardware package is selected.</p>
+<h3>Phase 4 - Tongue Layout</h3>
+<p>1. Use `drawings/tongue-layout.svg` and the SolidWorks unwrap handoff as the layout basis.
+2. Mark shell axis datum A, end planes B/C, equator plane D, and index zero E.
+3. Print or laser a 1:1 wrap template once CAD is verified.
+4. Place all eight tongues in a single ring around the equator for V1.
+5. Start each tongue about 5 percent long so it tunes flat and can be shortened upward.</p>
+<h3>Phase 5 - Tongue Cutting</h3>
+<p>1. Test the exact 1/8 in bit and slit depth on a scrap coupon.
+2. Mount the shell in the V-block cradle.
+3. Clamp so the final operation cannot release the shell.
+4. Cut one tongue at a time.
+5. Rotate the shell to the next index mark and re-check datum alignment.
+6. Leave tabs or bridges only in non-vibrating areas if the CNC strategy requires them.
+7. Deburr slits lightly without changing active tongue length.</p>
+<h3>Phase 6 - Tuning</h3>
+<p>1. Measure every rough-cut tongue before trimming.
+2. Tune from bass to treble.
+3. To raise pitch, shorten at the tongue tip.
+4. To lower pitch, thin near the tongue root with caution.
+5. Record before/after Hz, temperature, humidity, and strike tool in `validation.csv`.
+6. Stop when every note is within +/- 5 cents or when the remaining correction would risk structural damage.</p>
+<h3>Phase 7 - End Configuration Tests</h3>
+<p>1. Test the sealed body first if solid caps are installed.
+2. Test one-port response if the port cap is available.
+3. Test the goatskin or synthetic head option only after the bearing edge and hardware are confirmed.
+4. Record sustain, loudness, body resonance, and player feel for each configuration.</p>
+<h3>Phase 8 - Finish And Support</h3>
+<p>1. Sand 80, 120, 180, 220, 320, and 400 grit as needed.
+2. Avoid heavy finish on active tongue surfaces.
+3. Apply 2-3 light coats of the selected finish on scrap first.
+4. Add rubber feet or a cradle stand so the cylinder cannot roll during play.
+5. Take process and finished photos listed in `photo-shotlist.md`.</p>
+<h3>Maintenance</h3>
+<ul><li>Store away from extreme humidity swings.</li><li>Re-check tuning after finish cure and after the first week of playing.</li><li>If a tongue cracks, preserve the piece and log the failure mode before repair.</li></ul><p class="placeholder">No process photos in <code>images/</code>. Add at least one to populate this section.</p></section>
+<section><h2>The numbers</h2><h3>BOM</h3><table><thead><tr><th>item_id</th><th>category</th><th>part_name</th><th>qty</th><th>unit</th><th>material_spec</th><th>dimensions</th><th>make_buy</th><th>source_or_supplier</th><th>search_terms</th><th>date_checked</th><th>unit_cost_usd</th><th>total_cost_usd</th><th>substitute_rule</th><th>drawing_ref</th><th>notes</th></tr></thead><tbody><tr><td>B-001</td><td>Body</td><td>Padauk staves</td><td class="num">12</td><td>each</td><td>Padauk or alternate hardwood</td><td>16 in x 3.1 in x 1.0 in rough</td><td>make</td><td>lumber supplier</td><td>padauk 4/4 or 5/4 lumber blank</td><td></td><td></td><td></td><td>Cherry or hard maple acceptable if K is updated</td><td>drawings/body-overview.svg</td><td>V1 medium stave shell</td></tr>
+<tr><td>B-002</td><td>Body</td><td>End cap blanks</td><td class="num">2</td><td>each</td><td>Padauk or matching hardwood</td><td>13 in x 13 in x 0.75 in</td><td>make</td><td>lumber supplier</td><td>padauk panel blank 13 inch square</td><td></td><td></td><td></td><td>Use drumhead hardware instead for Config D</td><td>drawings/end-config-options.svg</td><td>Sealed configuration baseline</td></tr>
+<tr><td>B-003</td><td>Body</td><td>Acoustic port tube</td><td class="num">1</td><td>each</td><td>Wood or PVC</td><td>3 in OD x 1 in length</td><td>make/buy</td><td>hardware supplier</td><td>3 inch wood tube pvc pipe offcut</td><td></td><td></td><td></td><td>Only needed for ported variant</td><td>drawings/end-config-options.svg</td><td>Ported option</td></tr>
+<tr><td>B-004</td><td>Head</td><td>Goatskin rawhide</td><td class="num">1</td><td>each</td><td>Goatskin or calfskin</td><td>16 in or larger round</td><td>buy</td><td>drum parts supplier</td><td>goatskin drum head 16 inch rawhide</td><td></td><td></td><td></td><td>Synthetic head is alternate</td><td>drawings/end-config-options.svg</td><td>Optional true duntong end</td></tr>
+<tr><td>B-005</td><td>Head</td><td>Rope tuning kit</td><td class="num">1</td><td>set</td><td>Low-stretch polyester or drum rope</td><td>TBD</td><td>buy</td><td>drum parts supplier</td><td>djembe rope tuning ring 12 inch</td><td></td><td></td><td></td><td>Only needed for goatskin variant</td><td>drawings/end-config-options.svg</td><td>Includes rings/pullers TBD</td></tr>
+<tr><td>B-006</td><td>CNC</td><td>1/8 in upcut spiral bit</td><td class="num">1</td><td>each</td><td>Carbide router bit</td><td>0.125 in cutting diameter</td><td>buy</td><td>CNC tooling supplier</td><td>1/8 upcut spiral router bit carbide</td><td></td><td></td><td></td><td>Must match CNC collet</td><td>drawings/tongue-layout.svg</td><td>Tongue slit cutter</td></tr>
+<tr><td>B-007</td><td>Fixture</td><td>V-block cradle</td><td class="num">1</td><td>each</td><td>MDF or plywood fixture stock</td><td>for 12 in OD cylinder</td><td>make</td><td>shop stock</td><td>MDF plywood V block CNC cradle</td><td></td><td></td><td></td><td>Must include clamps and index marks</td><td>cnc/setup-sheet.md</td><td>Holds shell during tongue cutting</td></tr>
+<tr><td>B-008</td><td>Hardware</td><td>Rubber feet or cradle stand</td><td class="num">4</td><td>each</td><td>Rubber bumper or hardwood cradle</td><td>TBD</td><td>buy/make</td><td>hardware supplier</td><td>rubber feet bumper instrument stand</td><td></td><td></td><td></td><td>Cradle preferred if cylinder wants to roll</td><td>drawings/body-overview.svg</td><td>Support for playing</td></tr>
+<tr><td>B-009</td><td>Consumable</td><td>Wood glue</td><td class="num">1</td><td>bottle</td><td>Titebond III or equivalent</td><td>TBD</td><td>buy</td><td>hardware supplier</td><td>water resistant wood glue</td><td></td><td></td><td></td><td>Glue choice affects open time</td><td>assembly-manual.md</td><td>Stave shell glue-up</td></tr>
+<tr><td>B-010</td><td>Consumable</td><td>Finish and abrasives</td><td class="num">1</td><td>set</td><td>Tung oil or lacquer plus 80-400 grit</td><td>TBD</td><td>buy</td><td>hardware supplier</td><td>tung oil instrument finish lacquer</td><td></td><td></td><td></td><td>Avoid heavy finish on active tongues</td><td>assembly-manual.md</td><td>Final finishing</td></tr></tbody></table><h3>Cut list</h3><table><thead><tr><th>cut_id</th><th>part_name</th><th>variant</th><th>qty</th><th>rough_dimensions_in</th><th>finished_dimensions_in</th><th>material</th><th>grain_orientation</th><th>operation</th><th>yield_or_offcut_plan</th><th>drawing_ref</th><th>notes</th></tr></thead><tbody><tr><td>C-001</td><td>Stave blanks</td><td>DNT-MEDIUM</td><td class="num">12</td><td>16.50 x 3.25 x 1.10</td><td>16.00 x 3.142 x 1.00</td><td>Padauk</td><td>grain along cylinder length</td><td>rip mitered staves</td><td>cut 2 spare staves for tuning coupons</td><td>drawings/body-overview.svg</td><td>15 deg miter for 12 staves</td></tr>
+<tr><td>C-002</td><td>End cap blanks</td><td>DNT-MEDIUM</td><td class="num">2</td><td>13.25 x 13.25 x 0.80</td><td>disc to fit 11 in ID rabbet</td><td>Padauk or matching hardwood</td><td>stable face grain</td><td>cut/turn end caps</td><td>offcuts become port and tuning test coupons</td><td>drawings/end-config-options.svg</td><td>Skip or modify for drumhead option</td></tr>
+<tr><td>C-003</td><td>V-block cradle</td><td>DNT-MEDIUM</td><td class="num">1</td><td>20 x 16 x 0.75 panels</td><td>12 in OD support cradle</td><td>MDF or plywood</td><td>n/a</td><td>CNC or table saw fixture</td><td>save fixture for future variants</td><td>cnc/setup-sheet.md</td><td>Include index marks every 45 deg</td></tr>
+<tr><td>C-004</td><td>Tongue wrap template</td><td>DNT-MEDIUM</td><td class="num">1</td><td>sheet size TBD</td><td>1:1 wrap, 37.699 in circumference x 16 in length</td><td>paper or laser-safe sheet</td><td>n/a</td><td>print/laser template</td><td>n/a</td><td>drawings/tongue-layout.svg</td><td>SolidWorks unwrap should replace this after CAD</td></tr>
+<tr><td>C-005</td><td>Port tube</td><td>DNT-MEDIUM</td><td class="num">1</td><td>3.25 OD x 1.25</td><td>3.00 OD x 1.00</td><td>wood or PVC</td><td>n/a</td><td>trim and fit</td><td>only for ported variant</td><td>drawings/end-config-options.svg</td><td>Actual neck length must be measured</td></tr>
+<tr><td>C-006</td><td>Scrap tongue coupons</td><td>DNT-MEDIUM</td><td class="num">3</td><td>8.0 x 2.0 x 0.5</td><td>varies by test</td><td>same stock as shell</td><td>grain along tongue length</td><td>CNC test slits</td><td>destructive tests allowed</td><td>validation.csv</td><td>Use before cutting shell</td></tr>
+<tr><td>C-007</td><td>Handheld body blank</td><td>DNT-HANDHELD</td><td class="num">1</td><td>10 x 7 x 7</td><td>6 OD x 9 length x 0.375 wall</td><td>Padauk/cherry/maple TBD</td><td>grain along tongue length</td><td>split-blank or stave build</td><td>TBD for later prototype</td><td>drawings/body-overview.svg</td><td>Not V1 unless Tony selects handheld first</td></tr></tbody></table></section>
+<section><h2>Tuning &amp; validation</h2><table><thead><tr><th>measurement_id</th><th>variant</th><th>note</th><th>midi</th><th>target_hz</th><th>predicted_length_in</th><th>measured_hz</th><th>cents_error</th><th>tolerance_cents</th><th>environment</th><th>result</th><th>action</th></tr></thead><tbody><tr><td>V-001</td><td>DNT-MEDIUM</td><td>C4</td><td class="num">60</td><td class="num">261.63</td><td class="num">6.834</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure scrap C4 tongue before shell cut</td></tr>
+<tr><td>V-002</td><td>DNT-MEDIUM</td><td>Eb4</td><td class="num">63</td><td class="num">311.13</td><td class="num">6.267</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-003</td><td>DNT-MEDIUM</td><td>F4</td><td class="num">65</td><td class="num">349.23</td><td class="num">5.915</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-004</td><td>DNT-MEDIUM</td><td>G4</td><td class="num">67</td><td class="num">392.00</td><td class="num">5.583</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-005</td><td>DNT-MEDIUM</td><td>Ab4</td><td class="num">68</td><td class="num">415.30</td><td class="num">5.424</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-006</td><td>DNT-MEDIUM</td><td>Bb4</td><td class="num">70</td><td class="num">466.16</td><td class="num">5.120</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-007</td><td>DNT-MEDIUM</td><td>C5</td><td class="num">72</td><td class="num">523.25</td><td class="num">4.832</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-008</td><td>DNT-MEDIUM</td><td>Eb5</td><td class="num">75</td><td class="num">622.25</td><td class="num">4.431</td><td></td><td></td><td class="num">5</td><td>TBD</td><td>pending</td><td>Measure after rough cut and after tuning</td></tr>
+<tr><td>V-009</td><td>DNT-MEDIUM</td><td>sealed-body-formula</td><td></td><td class="num">214.23</td><td></td><td></td><td></td><td class="num">20</td><td>TBD</td><td>pending</td><td>Verify against Excel and impulse response</td></tr>
+<tr><td>V-010</td><td>DNT-MEDIUM</td><td>stopped-pipe-one-port</td><td></td><td class="num">211.75</td><td></td><td></td><td></td><td class="num">20</td><td>TBD</td><td>pending</td><td>Test one-port body response if Config B is built</td></tr>
+<tr><td>V-011</td><td>DNT-MEDIUM</td><td>open-pipe-two-port</td><td></td><td class="num">423.50</td><td></td><td></td><td></td><td class="num">20</td><td>TBD</td><td>pending</td><td>Test two-port body response if Config C is built</td></tr>
+<tr><td>V-012</td><td>DNT-MEDIUM</td><td>drumhead-body-response</td><td></td><td></td><td></td><td></td><td></td><td class="num">20</td><td>TBD</td><td>pending</td><td>Record membrane tuning and coupled tone if Config D is built</td></tr></tbody></table></section>
+<section><h2>Known risks</h2><h2>Duntong Risks</h2>
+<h3>Acoustic</h3>
+<h3>Acoustic Tongues ring sharp from curvature</h3>
+<p>**Symptom:** The rough-cut tongues measure consistently sharp compared with the flat cantilever prediction.</p>
+<p>**Mechanism:** The shell is curved, not flat. Even with a width/OD ratio below 0.20, curvature and stave glue lines may stiffen the tongue relative to the workbook model.</p>
+<p>**Test:** Cut a scrap coupon and one shell test tongue 5 percent long. Record predicted vs measured Hz before final shell cutting.</p>
+<p>**Mitigation:** Add a measured curvature correction to the design table, leave more tuning allowance, or lower the starting root for V1.</p>
+<p>**Severity:** Medium.</p>
+<h3>Structural</h3>
+<h3>Structural Stave glue lines weaken active tongue zones</h3>
+<p>**Symptom:** A tongue cracks, buzzes, or loses sustain along a glue line after cutting or playing.</p>
+<p>**Mechanism:** Stave construction creates glue lines around the circumference. If a tongue crosses or terminates near a glue line, the local boundary condition may be weak or damped.</p>
+<p>**Test:** Align the wrap template against stave seams before cutting. Strike-test a tongue coupon that includes a glue line.</p>
+<p>**Mitigation:** Place tongue centerlines between stave seams, widen non-vibrating bridges, or switch the V1 to split-blank construction for the handheld proof.</p>
+<p>**Severity:** High; human decision required before cutting if the final tongue layout crosses seams.</p>
+<h3>Ergonomic</h3>
+<h3>Ergonomic Cylinder rolls or forces awkward wrist angle</h3>
+<p>**Symptom:** Player has to stabilize the instrument instead of playing, or wrist extension becomes uncomfortable on the far-side tongues.</p>
+<p>**Mechanism:** A 12 in round shell on a table can roll unless supported. A full 360-degree note layout may invite reaches around the cylinder.</p>
+<p>**Test:** Mock the 12 in OD shell with a tube or cardboard form. Mark eight note positions and test seated/table/floor playing positions.</p>
+<p>**Mitigation:** Add rubber feet, a cradle stand, or rotate the note order to keep common patterns near the player.</p>
+<p>**Severity:** Medium.</p>
+<h3>Supply</h3>
+<h3>Supply Tonewood substitution changes K constant</h3>
+<p>**Symptom:** Tongues cut to Padauk lengths do not tune correctly when cherry, maple, or another hardwood is substituted.</p>
+<p>**Mechanism:** The cantilever formula depends on the material K constant. Species changes alter stiffness-to-density ratio.</p>
+<p>**Test:** Before substituting, update `K` in the workbook and cut a coupon from the actual stock.</p>
+<p>**Mitigation:** Keep Padauk for V1 or make species substitution an explicit DoE factor with separate validation rows.</p>
+<p>**Severity:** Medium.</p>
+<h3>Fit/Finish</h3>
+<h3>Fit/Finish Finish buildup damps tongues</h3>
+<p>**Symptom:** Tuned tongues lose sustain or shift pitch after finishing.</p>
+<p>**Mechanism:** Oil, lacquer, or film finish adds mass and damping to the active tongue surface and slit walls.</p>
+<p>**Test:** Finish a tuned coupon with the planned schedule and measure before/after Hz, sustain, and cents error.</p>
+<p>**Mitigation:** Use a low-build finish, mask active tongue surfaces, or tune after the finish has cured.</p>
+<p>**Severity:** Medium.</p></section>
+<section><h2>Family overview</h2><ul><li><a href="family/DNT-HANDHELD.html">DNT-HANDHELD — C5</a></li><li><a href="family/DNT-MEDIUM.html">DNT-MEDIUM — C4</a></li></ul></section>
+<section><h2>Resources</h2><ul><li><a href="../README.md">Project README</a></li><li><a href="../capstone-deck.pptx">Capstone deck (.pptx)</a></li><li><a href="../print-packet.pdf">Printable shop packet (.pdf)</a></li><li><a href="https://github.com/tonykoop">Tony's GitHub</a></li></ul></section>
+</main>
+<footer>
+Built by Tony Koop · CC-BY 4.0 · <a href="https://github.com/tonykoop">github.com/tonykoop</a>
+</footer>
+</body>
+</html>
