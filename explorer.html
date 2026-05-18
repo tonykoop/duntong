@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duntong V5 Starter Explorer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202124;
+      --muted: #5f6368;
+      --line: #d7d2c8;
+      --panel: #fbfaf7;
+      --accent: #7b341e;
+      --accent-2: #276749;
+      --warn: #8a5a00;
+      --bg: #f4f1eb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header {
+      padding: 28px clamp(18px, 4vw, 48px) 18px;
+      background: #29231f;
+      color: white;
+      border-bottom: 5px solid var(--accent);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+    }
+    p {
+      margin: 0 0 10px;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3vw, 36px) 40px;
+    }
+    .status {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .tile, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .tile strong {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .tile span {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .92rem;
+    }
+    th, td {
+      padding: 9px 8px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+    li + li {
+      margin-top: 7px;
+    }
+    code {
+      background: #ece7dd;
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #eadfd6;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .ok {
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+    .warn {
+      color: var(--warn);
+      font-weight: 700;
+    }
+    @media (max-width: 780px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      table {
+        font-size: .84rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Duntong</h1>
+    <p>Original cylindrical tongue drum V5 starter explorer for issue #1.</p>
+  </header>
+
+  <main>
+    <div class="status">
+      <div class="tile">
+        <strong>Readiness</strong>
+        <span>V5 starter/build-packet candidate</span>
+      </div>
+      <div class="tile">
+        <strong>Fabrication status</strong>
+        <span>Not build-ready</span>
+      </div>
+      <div class="tile">
+        <strong>Primary authority</strong>
+        <span>Workbook and design-table starter values</span>
+      </div>
+      <div class="tile">
+        <strong>Missing authority</strong>
+        <span>Measured data, checked DXF, native CAD, shop CAM</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="stack">
+        <section>
+          <h2>Packet Summary</h2>
+          <p>The duntong combines a cylindrical drum body with tuned wooden tongue-drum voices around the shell. The current packet preserves two workbook-derived prototype sizes and keeps the medium stave-cylinder as the V1 target.</p>
+          <p><span class="badge">Honest boundary</span> The OpenSCAD file and SVG drawings are review artifacts. They help inspect the concept, but they do not replace checked CAD, DXF exports, measured templates, or prototype tuning data.</p>
+        </section>
+
+        <section>
+          <h2>Variant Snapshot</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Variant</th>
+                <th>Size</th>
+                <th>Root</th>
+                <th>Construction</th>
+                <th>Authority posture</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DNT-HANDHELD</td>
+                <td>6 in OD x 9 in long</td>
+                <td>C5</td>
+                <td>Split-blank or stave</td>
+                <td>Measurement required</td>
+              </tr>
+              <tr>
+                <td>DNT-MEDIUM</td>
+                <td>12 in OD x 16 in long</td>
+                <td>C4</td>
+                <td>Stave cylinder</td>
+                <td>V1 starter target, measurement required</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Authority Chain</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Artifact</th>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>duntong-design-table.xlsx</code></td>
+                <td>Workbook source for starter dimensions</td>
+                <td class="ok">Starter authority</td>
+              </tr>
+              <tr>
+                <td><code>cad/design-table-inputs.csv</code></td>
+                <td>Repo-readable design table</td>
+                <td class="ok">Starter authority</td>
+              </tr>
+              <tr>
+                <td><code>cad/duntong_master.scad</code></td>
+                <td>Parametric master-layout starter</td>
+                <td class="warn">Not production CAM</td>
+              </tr>
+              <tr>
+                <td><code>drawings/*.svg</code></td>
+                <td>Review previews</td>
+                <td class="warn">Not DXF fabrication authority</td>
+              </tr>
+              <tr>
+                <td><code>validation.csv</code></td>
+                <td>Prototype measurement gates</td>
+                <td class="warn">Pending measurements</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <div class="stack">
+        <section>
+          <h2>Open Gates</h2>
+          <ul>
+            <li>Cut same-stock tongue coupons and measure pitch before shell cutting.</li>
+            <li>Confirm Padauk or substitute material constant after stock selection.</li>
+            <li>Measure curved-shell tongue shift and tune from long/flat rough cuts.</li>
+            <li>Select sealed, ported, two-port, or drumhead end condition after tests.</li>
+            <li>Create checked DXF/native CAD before laser, CNC, or router work.</li>
+            <li>Validate V-block clearance, indexing, feeds, speeds, and hold-down at the actual machine.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Review Files</h2>
+          <ul>
+            <li><code>capstone-manifest.json</code></li>
+            <li><code>visual-output-register.csv</code></li>
+            <li><code>cad/mcp-session-log.md</code></li>
+            <li><code>family-spec.csv</code></li>
+            <li><code>cad/SolidWorks-MasterLayout-Plan.md</code></li>
+            <li><code>print-packet.html</code></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
