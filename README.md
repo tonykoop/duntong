@@ -54,16 +54,39 @@ duntong/
 
 ## Current Status
 
+Status line: V5 starter/build-packet candidate; not build-ready. The repo has
+workbook-derived dimensions, a parametric OpenSCAD master-layout starter,
+review SVG drawings, CNC planning notes, and print/capstone outputs. It does
+not yet contain measured prototype data, SolidWorks-native CAD, DXF exports,
+MCP-generated renders, or shop-validated CAM.
+
 | Area | Status |
 |---|---|
 | Original concept and workbook | Done |
 | Guided v4.2 intake | Done |
-| Build packet docs | Drafted for V1 review |
-| Drawings | SVG review drawings included |
+| Build packet docs | Drafted for V1 review; not build-ready |
+| Drawings | SVG review drawings included; no DXF fabrication export yet |
 | CNC/CAM | Pre-CAM operation plan only; no G-code |
-| SolidWorks | MasterLayout handoff files included; no fake CAD |
+| OpenSCAD | Parametric master-layout starter; not production CAM |
+| SolidWorks | MasterLayout handoff files included; no native SolidWorks part yet |
+| Visual authority | `visual-output-register.csv` records design-table/CAD authority and review-only previews |
+| Explorer | Root `explorer.html` added for packet review |
 | Wolfram | Readable `.wl` source included |
 | Prototype data | Forthcoming |
+
+## Authority And Unknowns
+
+- Fabrication authority is limited to workbook/design-table-derived starter
+  values in `duntong-design-table.xlsx`, `cad/design-table-inputs.csv`, and
+  `cad/sw-global-variables.csv`.
+- `cad/duntong_master.scad` is a parametric master-layout starter. It is useful
+  for review, STL experiments, and downstream CAD translation, but it is not
+  shop-validated production geometry.
+- SVG files in `drawings/` are review previews. They do not replace a checked
+  DXF, native CAD drawing, or measured template.
+- Padauk material constants, curved-shell tongue behavior, end-condition
+  coupling, drumhead hardware, D minor retuning, fixture clearances, feeds and
+  speeds, and all prototype tuning data remain measurement-required.
 
 ## Sister Repos
 

@@ -3,6 +3,9 @@
 ## Drawing Set
 
 The current SVG drawing set is review-grade and should be replaced or extended by SolidWorks drawings before cutting expensive stock.
+Visual authority for the current packet is tracked in
+`visual-output-register.csv`. The existing SVG files are derived review
+previews, not DXF/CAD fabrication authority.
 
 | Drawing | Purpose |
 |---|---|
@@ -31,3 +34,13 @@ SolidWorks should create:
 3. Cylindrical unwrap sketch for the single-ring tongue layout.
 4. Optional end-cap configurations: sealed, ported, drumhead.
 5. Drawing sheets exported to PDF/SVG before CAM.
+
+## Missing V5 Visual Gates
+
+- Export checked DXF plates from native CAD or an Illustrator-reviewed vector
+  master before marking the drawing set shop-ready.
+- Replace review SVG previews with derived previews that name the governing
+  CAD/DXF/design-table source.
+- Add Blender/Photoshop/image-generation outputs only after logging their
+  source artifacts and keeping them concept/support-only unless derived from
+  fabrication authority.

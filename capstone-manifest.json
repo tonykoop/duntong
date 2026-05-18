@@ -1,32 +1,76 @@
 {
-  "packet_dir": "/mnt/c/Users/Tony/Documents/GitHub/duntong",
+  "schema_version": "round30-v5-starter-1",
+  "repo": "tonykoop/duntong",
+  "issue": 1,
+  "packet_dir": ".",
   "title": "Duntong Original Cylindrical Tongue Drum",
-  "generated": "2026-05-06",
+  "generated": "2026-05-18",
+  "status": "V5 starter/build-packet candidate; not build-ready",
+  "readiness_notes": [
+    "Workbook-derived design tables and review drawings are present.",
+    "Measured prototype data, checked DXF exports, native CAD, MCP-generated renders, and shop-validated CAM are still missing.",
+    "Generated or derived visuals must remain support artifacts unless tied to CAD, DXF, design-table, or measured authority."
+  ],
   "files_included": [
+    "README.md",
     "design.md",
+    "family-spec.csv",
+    "duntong-design-table.xlsx",
+    "cad/design-table-inputs.csv",
+    "cad/sw-global-variables.csv",
+    "cad/duntong_master.scad",
+    "cad/SolidWorks-MasterLayout-Plan.md",
+    "cad/mcp-session-log.md",
+    "visual-output-register.csv",
+    "drawings/body-overview.svg",
+    "drawings/tongue-layout.svg",
+    "drawings/end-config-options.svg",
+    "drawings/section-view.svg",
     "bom.csv",
     "sourcing.csv",
     "cut-list.csv",
-    "drawing-brief.md",
-    "assembly-manual.md",
     "validation.csv",
-    "supplier-rfq.md",
-    "visual-bom-brief.md",
-    "README.md",
-    "family-spec.csv",
-    "photo-shotlist.md",
-    "risks.md"
+    "cnc/setup-sheet.md",
+    "cnc/operations.csv",
+    "explorer.html"
   ],
-  "outputs": {
-    "capstone_deck_markdown": "/mnt/c/Users/Tony/Documents/GitHub/duntong/capstone-deck.md",
-    "capstone_deck_pptx": "/mnt/c/Users/Tony/Documents/GitHub/duntong/capstone-deck.pptx",
-    "print_packet_markdown": "/mnt/c/Users/Tony/Documents/GitHub/duntong/print-packet.md",
-    "print_packet_html": "/mnt/c/Users/Tony/Documents/GitHub/duntong/print-packet.html",
-    "print_packet_pdf": "/mnt/c/Users/Tony/Documents/GitHub/duntong/print-packet.pdf"
+  "file_roles": {
+    "README.md": "packet overview and status",
+    "design.md": "design intent, assumptions, and validation plan",
+    "family-spec.csv": "variant rows with explicit empirical-only acoustic posture",
+    "duntong-design-table.xlsx": "source workbook authority for starter dimensions",
+    "cad/design-table-inputs.csv": "repo-readable design table",
+    "cad/sw-global-variables.csv": "SolidWorks variable handoff",
+    "cad/duntong_master.scad": "OpenSCAD master-layout starter",
+    "cad/SolidWorks-MasterLayout-Plan.md": "native CAD handoff plan",
+    "cad/mcp-session-log.md": "MCP provenance log placeholder and current no-MCP disclosure",
+    "visual-output-register.csv": "visual authority register",
+    "drawings/body-overview.svg": "review SVG preview",
+    "drawings/tongue-layout.svg": "review SVG preview",
+    "drawings/end-config-options.svg": "review SVG preview",
+    "drawings/section-view.svg": "review SVG preview",
+    "bom.csv": "starter bill of materials",
+    "sourcing.csv": "unverified sourcing placeholders",
+    "cut-list.csv": "starter cut list and coupons",
+    "validation.csv": "measurement and tuning gates",
+    "cnc/setup-sheet.md": "pre-CAM setup notes",
+    "cnc/operations.csv": "pre-CAM operation list",
+    "explorer.html": "root packet explorer"
   },
-  "notes": [
-    "PPTX was created from capstone-deck.md with pandoc because python-pptx is not installed.",
-    "PDF was created as a simple text-rendered print packet because reportlab, weasyprint, and a LaTeX engine are not installed.",
-    "Use print-packet.html for browser print-to-PDF if a styled PDF is needed."
+  "outputs": {
+    "explorer": "explorer.html",
+    "capstone_deck_markdown": "capstone-deck.md",
+    "capstone_deck_pptx": "capstone-deck.pptx",
+    "print_packet_markdown": "print-packet.md",
+    "print_packet_html": "print-packet.html",
+    "print_packet_pdf": "print-packet.pdf"
+  },
+  "remaining_unknowns": [
+    "Curved-shell tongue pitch shift must be measured on coupons and the first shell.",
+    "Final material constant, humidity response, and finish effect are not measured.",
+    "Sealed, ported, two-port, and drumhead end-condition coupling remains experimental.",
+    "DXF export and native CAD review are missing.",
+    "CNC feeds, speeds, hold-down, and clearance are not shop-validated.",
+    "No Blender, Photoshop, Illustrator, or image-generation MCP artifacts were created in this lane."
   ]
 }

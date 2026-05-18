@@ -1,0 +1,8 @@
+artifact_id,path,artifact_kind,role,authority,derived_from,dimension_claim,fabrication_required,notes
+DT-001,cad/design-table-inputs.csv,design_table,design_table,fabrication,,derived_from_authority,true,Workbook-derived starter dimensions; not measured or prototype-validated
+CAD-001,cad/duntong_master.scad,cad,derived_preview,derived_preview,DT-001,derived_from_authority,false,Parametric OpenSCAD master-layout starter; not production CAM
+SVG-001,drawings/body-overview.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,Review preview only; replace or extend with checked CAD/DXF before cutting
+SVG-002,drawings/tongue-layout.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,Review tongue layout preview; wrap geometry needs CAD/DXF validation
+SVG-003,drawings/end-config-options.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,End variants are review options; final end condition remains measurement-required
+SVG-004,drawings/section-view.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,Section preview for review; final wall/end-cap interfaces require checked CAD
+SVG-005,drawings/family-overview.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,Family review preview; does not establish build-ready geometry
