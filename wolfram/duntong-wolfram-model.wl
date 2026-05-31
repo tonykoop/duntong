@@ -11,7 +11,7 @@ metadata = <|
   "A4" -> 440
 |>;
 
-packetDir = DirectoryName[$InputFileName /. "" -> NotebookDirectory[]];
+packetDir = If[$InputFileName =!= "", DirectoryName[$InputFileName], Quiet@Check[NotebookDirectory[], Directory[]]];
 familySpecPath = FileNameJoin[{packetDir, "..", "family-spec.csv"}];
 validationPath = FileNameJoin[{packetDir, "..", "validation.csv"}];
 
@@ -127,4 +127,56 @@ packetNotebook[] := CreateDocument[
   WindowTitle -> "Duntong Model"
 ];
 
-packetNotebook[];
+(* Final top-level expression: bare Manipulate for CloudDeploy.
+   Exposes real Duntong cantilever-tongue + Helmholtz-cavity parameters and
+   displays EMPIRICAL ESTIMATES of tongue length, pitch, cents error, and
+   body-cavity coupling. *)
+Manipulate[
+  Module[
+    {predLen, freqAtLen, cents, helm, coupled, target},
+    target = N[frequencyFromMidi[rootMidi + offset]];
+    predLen = N[cantileverLength[k, thickness, target]];
+    freqAtLen = N[cantileverFrequency[k, thickness, testLength]];
+    cents = N[centsError[freqAtLen, target]];
+    helm = N[helmholtzFrequency[slitArea, volume, neckLength]];
+    coupled = Abs[helm/target - 1] <= 0.2;
+    Column[{
+      Style["Duntong tongue-drum model -- EMPIRICAL ESTIMATES", Bold, 14],
+      Grid[
+        {
+          {"Quantity", "Value", "Units"},
+          {"Target pitch (MIDI " <> ToString[rootMidi + offset] <> ")", NumberForm[target, {6, 2}], "Hz"},
+          {"Predicted tongue length", NumberForm[predLen, {6, 3}], "in"},
+          {"Frequency at test length", NumberForm[freqAtLen, {6, 2}], "Hz"},
+          {"Cents error vs target", NumberForm[cents, {6, 1}], "cents"},
+          {"Helmholtz cavity estimate", NumberForm[helm, {6, 2}], "Hz"},
+          {"Cavity coupled to target (<=20%)?", coupled, ""}
+        },
+        Frame -> All,
+        Background -> {None, {{LightYellow, None}}},
+        Alignment -> Left
+      ],
+      Style["EMPIRICAL ESTIMATES only -- validate against measured prototype data.", Italic, Gray],
+      Plot[
+        cantileverFrequency[k, thickness, L],
+        {L, 3, 9},
+        PlotRange -> {0, 900},
+        Frame -> True,
+        FrameLabel -> {"tongue length (in)", "frequency (Hz)"},
+        PlotLabel -> "EMPIRICAL ESTIMATE: cantilever frequency vs length",
+        Epilog -> {Red, PointSize[0.02], Point[{testLength, freqAtLen}],
+                   Dashed, Gray, Line[{{3, target}, {9, target}}]},
+        ImageSize -> 420
+      ]
+    }, Spacings -> 1.2]
+  ],
+  {{rootMidi, 60, "root MIDI"}, 48, 72, 1},
+  {{offset, 0, "tongue offset (semitones)"}, 0, 15, 1},
+  {{k, 24438, "stiffness constant K"}, 20000, 30000},
+  {{thickness, 0.5, "wall/tongue thickness (in)"}, 0.25, 0.75},
+  {{testLength, 6.834, "test tongue length (in)"}, 3, 9},
+  {{slitArea, mediumSlitArea, "slit area (in^2)"}, 0.5, 10},
+  {{volume, mediumInternalVolume, "cavity volume (in^3)"}, 200, 1800},
+  {{neckLength, 0.5, "neck length (in)"}, 0.125, 1.5},
+  SaveDefinitions -> True
+]
