@@ -72,5 +72,23 @@
     "DXF export and native CAD review are missing.",
     "CNC feeds, speeds, hold-down, and clearance are not shop-validated.",
     "No Blender, Photoshop, Illustrator, or image-generation MCP artifacts were created in this lane."
-  ]
+  ],
+  "engineering": {
+    "wolfram": [
+      {
+        "source_file": "percussion/duntong/duntong-starter.wl",
+        "cloud_path": "Musical_Instruments/woodwinds/duntong/duntong-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/woodwinds/duntong/duntong-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      },
+      {
+        "source_file": "percussion/duntong/wolfram/duntong-wolfram-model.wl",
+        "cloud_path": "Musical_Instruments/woodwinds/duntong/duntong-wolfram-model.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/woodwinds/duntong/duntong-wolfram-model.wl",
+        "permission": "Public-Execute",
+        "kind": "geometry-model"
+      }
+    ]
+  }
 }
