@@ -1,0 +1,34 @@
+{
+  "product": "duntong",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "rev-A (pre-commit intake, 2026-07-01)",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/duntong_master.scad",
+      "format": "openscad-source",
+      "sha256": "723e69e6e639454bb9617963085709aae8129c8bf647d1cce9ca808ccdad349c",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Parametric master-layout starter (handheld/medium variants, cantilever tongue lengths from workbook K constant). Kept as-is per EXISTING MASTERS clause; not rewritten this pass. Render check pass (openscad -o STL, exit 0)."
+    },
+    {
+      "path": "duntong-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "f86e424c1b98947c1ae340889d75ffa5f2e7d94e46fb72afa1dfbccc727afe02",
+      "authority": "fabrication",
+      "lossy": false,
+      "notes": "Current dimensional authority (handheld/medium sizes, tongue layout, end-condition variants, BOM baseline)."
+    },
+    {
+      "path": "wolfram/duntong-wolfram-model.wl",
+      "format": "wolfram-source",
+      "sha256": "f560a1fb042da86f78d97a72863503ad9f30de04a6bf3c3d3be0b7b0d17505fc",
+      "authority": "derived_preview",
+      "lossy": false,
+      "notes": "Source-only (not executed); L2 evidence for cantilever/Helmholtz/stopped-pipe/open-pipe models."
+    }
+  ],
+  "notes": "OpenSCAD source + design table are the current masters; no STEP export or SolidWorks-native part yet (SolidWorks MasterLayout handoff is Windows-side work, out of scope for this intake pass). Gate A (Alpha workspace compile) not yet run."
+}

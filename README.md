@@ -2,6 +2,8 @@
 
 > Tony Koop's original hybrid instrument concept: a dundun-inspired cylindrical drum body with tuned wooden tongue-drum voices cut around the shell.
 
+**Status:** L2 V5 build-packet candidate
+
 ## What This Is
 
 The duntong is an original instrument design by Tony Koop. It combines the social, cylindrical playing form of a hand drum with the melodic tuning logic of a wooden tongue drum. Instead of cutting tongues into a flat box lid, the duntong places cantilever tongues around a round shell so the instrument can be played from multiple sides.
@@ -49,12 +51,13 @@ duntong/
 ├── drawings/
 ├── images/
 ├── site/
-└── wolfram/
+├── wolfram/
+└── evolution/
 ```
 
 ## Current Status
 
-Status line: V5 starter/build-packet candidate; not build-ready. The repo has
+L2 V5 build-packet candidate; not build-ready. The repo has
 workbook-derived dimensions, a parametric OpenSCAD master-layout starter,
 review SVG drawings, CNC planning notes, and print/capstone outputs. It does
 not yet contain measured prototype data, SolidWorks-native CAD, DXF exports,
@@ -71,8 +74,9 @@ MCP-generated renders, or shop-validated CAM.
 | SolidWorks | MasterLayout handoff files included; no native SolidWorks part yet |
 | Visual authority | `visual-output-register.csv` records design-table/CAD authority and review-only previews |
 | Explorer | Root `explorer.html` added for packet review |
-| Wolfram | Readable `.wl` source included |
+| Wolfram | Readable `.wl` source included; source-only, not executed |
 | Prototype data | Forthcoming |
+| Evolution intake | Stage 0 intake complete (`evolution/`); Gate A not run |
 
 ## Authority And Unknowns
 
