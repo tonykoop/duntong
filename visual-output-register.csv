@@ -6,3 +6,4 @@ SVG-002,drawings/tongue-layout.svg,svg_preview,derived_preview,derived_preview,D
 SVG-003,drawings/end-config-options.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,End variants are review options; final end condition remains measurement-required
 SVG-004,drawings/section-view.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,Section preview for review; final wall/end-cap interfaces require checked CAD
 SVG-005,drawings/family-overview.svg,svg_preview,derived_preview,derived_preview,DT-001,derived_from_authority,false,Family review preview; does not establish build-ready geometry
+WL-001,wolfram/duntong-wolfram-model.wl,wolfram_source,wolfram,derived_preview,DT-001,source_only,false,Wolfram cantilever/cavity model source; not executed — source-only evidence at L2.
